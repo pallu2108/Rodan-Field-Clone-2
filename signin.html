@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    
+    <title>sign up</title>
+    
+    <style>
+        #box{
+            /* margin: 70px 50px 50px 50px; */
+            /* box-sizing: border-box; */
+            margin-top: 80px;
+        
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+           
+            width: 60%;
+            margin: 50px 200px 0px 300px; 
+           
+
+        }
+        #form{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            width: 60%;
+            margin: auto; 
+            width: 350px;
+            /* height: 200px; */
+            margin: auto;
+            padding: 30px;
+            margin-top: 10px;
+            justify-content: center;
+            font-size: 14px;
+            cursor: pointer;
+            /* line-height: 42PX; */
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                
+        }
+        p{
+           font-size: 16px;
+           margin-bottom: 0%;
+
+        }
+        #passwordbox{
+          color:#7c787d;
+        }
+        #email{
+            width: 100%;
+            line-height: 40px;
+            /* font-size: 21px; */
+            border: 0.1rem solid #dcdcdc;
+            border-radius: 5px;
+            margin-top: -5PX;
+            line-height: 40px;
+            margin-bottom: 20px;
+ 
+        }
+        #span{
+            margin-left: 40%;
+        }
+        #signin{
+            width: 100%;
+            height: 50px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #ffffff;
+            background-color: black;
+            font-family: ProximaNovaRegular, Arial, sans-serif;
+            
+        } 
+        a{
+            text-decoration: underline;
+            font-family: ProximaNovaRegular,Arial,Sans-Serif;
+            font-size: 0.7rem;
+            /* font-weight: 00; */
+            color: #006EB3;
+
+
+
+            
+            
+        }
+        #forget{
+            float: right;
+            text-decoration: none;
+        }
+        #recaptha{
+            color: #7c787d;
+        }
+        form i {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+        #password{
+           
+            width: 100%;
+            border-radius: 5px;
+            border: 0.1rem solid #dcdcdc;;
+            cursor: pointer;
+            margin-top: px;
+            line-height: 40px;
+            margin-bottom: 30px;
+        }
+    
+        @media all and (min-width: 80px) and (max-width: 400px) {
+            #box {
+            grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <form action="" id="form">
+                
+                <div id="passwordbox">
+                <p>Email</p>
+                <input type="email"  id="email" >
+                <p>Password <a id="forget" href="/en-us/login/pw/request/external">Forgot Password?</a></p>
+                <input type="password" 
+                name="password" id="password" />
+               <i class="bi bi-eye-slash" 
+                id="togglePassword"></i>
+                </div>
+                <div>
+                    <p id="recaptha">
+                        This site is protected by reCAPTCHA and the 
+                        <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> and 
+                        <a href="https://policies.google.com/terms?hl=en">Terms of Service</a>
+                    </p>
+                    <p>
+                        We updated our Terms & Conditions on 8/3/21. By clicking “SIGN IN” you agree to our updated terms, in addition to our <a href="/en-us/privacy-policy" target="_blank">Privacy Policy</a>
+                    </p>
+                </div>
+               <input type="submit" id="signin" value="SIGN IN">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    document.querySelector("form").addEventListener("submit", signinfun)
+
+    function signinfun(){
+        event.preventDefault();
+
+        var email=(masaiproject@123);
+        
+        var enteredEmail = document.querySelector("#email").value;
+        var enteredPass = document.querySelector("#password").value;
+        // console.log(enteredEmail,enteredPass)
+        if (
+            enteredEmail ==enteredEmail &&
+            enteredPass == enteredPass
+      ) {
+
+        window.location.href = "navbar.html";
+      }
+    
+    }
+    const togglePassword = document
+        .querySelector('#togglePassword');
+
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', () => {
+        console.log("YES")
+
+        // Toggle the type attribute using
+        // getAttribure() method
+        const type = password
+            .getAttribute('type') === 'password' ?
+            'text' : 'password';
+              
+        password.setAttribute('type', type);
+        document.querySelector("#togglePassword")=('bi bi-eye');
+        // Toggle the eye and bi-eye icon
+       
+    });
+
+</script>
