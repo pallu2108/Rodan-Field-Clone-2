@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn More</title>
+    <!-- <link rel="stylesheet" href="./learn.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+#bag > img {
+  width: 20px;
+  padding-left: 20px;
+}
+
+
+
+
+header {
+  width: 100%;
+  min-height: 100px;
+
+  position: relative;
+  font-family: HCoGothamSSmSemiBold, Arial, Sans-Serif;
+  font-size: 12px;
+  margin-bottom: -55px;
+}
+
+header a {
+  text-decoration: none;
+  padding: 10px 55px;
+  color: black;
+}
+
+
+
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+button {
+  font-family: "Roboto Condensed", sans-serif;
+}
+#perksLogo {
+  margin: auto;
+  width: 17%;
+  height: 60px;
+  margin-top: 50px;
+}
+img {
+  width: 100%;
+
+}
+.image1{
+  width: 100%;
+  height: 555px;
+}
+#description {
+  width: 65%;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 40px;
+  font-weight: 100;
+  line-height: 25px;
+  color: rgb(97, 97, 97);
+}
+.offersCont {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offersCont2 {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offersSeparateCont {
+  width: 30%;
+  height: 480px;
+  margin: 10px;
+}
+.offersLogo {
+  width: 90%;
+  height: 300px;
+  margin: auto;
+}
+.offersText {
+  width: 90%;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  margin-top: 40px;
+  line-height: 25px;
+}
+.offersText > h3 {
+  display: inline;
+}
+.offersText > p {
+  font-size: 17px;
+  text-align: center;
+  font-weight: lighter;
+  color: rgb(97, 97, 97);
+  display: inline;
+}
+.imageContainer {
+  width: 75%;
+  height: 552px;
+  margin: 0 auto;
+  display: flex;
+}
+.imageBox {
+  width: 49%;
+  height: 552px;
+}
+.textBox {
+  width: 49%;
+  height: 552px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+.textBox > button {
+  width: 45%;
+  height: 50px;
+}
+.textBox > button,
+h2 {
+  margin: 40px;
+}
+.textBox > h2 {
+  margin-top: 150px;
+  letter-spacing: 2px;
+  font-family: BauerBodoniLight, Arial, Sans-Serif;
+}
+.textBox > p {
+  font-size: 18px;
+  line-height: 25px;
+  color: rgb(97, 97, 97);
+  font-weight: lighter;
+}
+.textBox > button {
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: white;
+  cursor: pointer;
+}
+.end-line {
+  width: 50%;
+  height: 150px;
+  margin: 100px auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+.end-line > p {
+  color: rgb(97, 97, 97);
+}
+hr {
+  background: none;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media (max-width: 1450px) {
+  #main-nav {
+    display: none;
+  }
+  header {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .offersCont {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .offersCont2 {
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .offersSeparateCont {
+    width: 100%;
+  }
+  .offersText {
+    height: 100px;
+    margin-top: 250px;
+  }
+  .offersLogo {
+    width: 400px;
+    height: 100px;
+  }
+  img {
+    width: 100%;
+    height: 555px;
+  }
+  .imageContainer {
+    width: 100%;
+    display: inline-block;
+  }
+  .imageBox {
+    width: 100%;
+  }
+  .textBox {
+    width: 100%;
+    height: 200px;
+  }
+  #description {
+    height: 100px;
+  }
+}
+
+
+  </style>
+  <body>
+  
+    <div id="perksLogo">
+      <img src="perkslogo.png" alt="" />
+    </div>
+    <div id="description">
+      <p>
+        Save money, enjoy free shipping and get a free gift ($50+ retail price) with your 2nd order when you match with
+        a Consultant and become a Preferred Customer (PC). All for a one-time fee of $19.95. Between discounts + free
+        shipping, the membership pays for itself!
+      </p>
+    </div>
+    <div class="offersCont">
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img 
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-01.jpg?context=bWFzdGVyfHJvb3R8MTAzOTV8aW1hZ2UvanBlZ3xoZWEvaGU1LzExMDA0MzY2NzE2OTU4LmpwZ3xkOTYyNTBmYjVmNDkwYzNhNDJiMDljMTU2OTFkZWZiZTkwNTMwOWUyMDZhZjE1YjU2MGJmYjVkYzZmYzkwMWFk"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>10% OFF</h3>
+          <br />
+          <p>Get 10% off every order, starting with your first</p>
+        </div>
+      </div>
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img 
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-02.jpg?context=bWFzdGVyfHJvb3R8OTMwOHxpbWFnZS9qcGVnfGhmZC9oMGMvMTEwMDQzNjY3ODI0OTQuanBnfDdmMzUyNGIxZDAwMjkxNmNiNjJmYWUwYzA2NjllNDFlNTNhYTMyYzBiYjA3ZjFlNWIwNGYwY2Q3NDFiMjBkOGM"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>FREE SHIPPING</h3>
+          <br />
+          <p>Get free shipping on orders $80+</p>
+        </div>
+      </div>
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img 
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-03.jpg?context=bWFzdGVyfHJvb3R8MTIyMDF8aW1hZ2UvanBlZ3xoZTIvaDViLzExMDA0MzY2ODQ4MDMwLmpwZ3w5ZDA3ZWMzY2I4YWFlZGRhNDM1YWRjNzlmODQ4OGFhNmJkMTA3NWMzMTI5OWMwNjQ5MGE3MjZhNGM1MDY5ZTli"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>FREE PERKS PRESENT</h3>
+          <br />
+          <p>Get a free gift ($50+ retail price) with your 2nd order placed 30-90 days after enrollment</p>
+        </div>
+      </div>
+    </div>
+    <div class="offersCont2">
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img 
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-04.jpg?context=bWFzdGVyfHJvb3R8MTI1MDl8aW1hZ2UvanBlZ3xoZjMvaGQ3LzExMDA0MzY2OTEzNTY2LmpwZ3xkMWRmNjQ0MDhmMTg3ZThlZmE3OWNjMmQ3YjQ3ODY3NWIzYmJiNmI1ZGQ5ZGQxODFkYWU3ZmYwZjkyMmQ0ZjA0"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>OFFERS + REWARDS</h3>
+          <br />
+          <p>Get exclusive access to personalized offers + rewards</p>
+        </div>
+      </div>
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-05.jpg?context=bWFzdGVyfHJvb3R8MTAwNzl8aW1hZ2UvanBlZ3xoOWEvaGVkLzExMDA0MzY2OTc5MTAyLmpwZ3xiNDQ3NjE1NWIwMDY1MTI1N2RjMjk0Y2FhNTYxMDk1N2M4YjA2MjA1OTgwZTcyMTg3Y2E0ODM5Y2NlN2M0MjE4"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>FLEX SUBSCRIPTION</h3>
+          <br />
+          <p>Get convenient delivery of your subscription cart every 60 days. Adjust or cancel any time.</p>
+        </div>
+      </div>
+      <div class="offersSeparateCont">
+        <div class="offersLogo">
+          <img 
+            src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-06.jpg?context=bWFzdGVyfHJvb3R8MTIwNzh8aW1hZ2UvanBlZ3xoNDcvaDgyLzExMDA0MzY3MDQ0NjM4LmpwZ3wxZDZlYzA0MTc3M2I4OWY2NDU5NTZkMTA5ZGNkYTFkODRhOWZlM2FmOTQ3YTEyNzgyNjhkYzI5YWJjODE1M2Zj"
+            alt="logo"
+          />
+        </div>
+        <div class="offersText">
+          <h3>CONSULTANT</h3>
+          <br />
+          <p>Get personalized recommendations, advice, help & more</p>
+        </div>
+      </div>
+    </div>
+    <div class="imageContainer">
+      <div class="imageBox">
+        <img class="image1"
+          src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-07.jpg?context=bWFzdGVyfHJvb3R8MTgxNzV8aW1hZ2UvanBlZ3xoZTgvaDE0LzExMDA0MzY2NDU0ODE0LmpwZ3xkZTk5NGI5MmEyMzZkNTZkNWVmY2I1OGIzMjZlMmMwOTU4MTQ2ZWMxOTc4YTUwMTdiMWU5NmNlMWQ3NzFlOWRi"
+          alt=""
+        />
+      </div>
+      <div class="textBox">
+        <h2>HOW TO ENROLL</h2>
+        <p>
+          Add the products you want to your cart and check the PC Perks box in your shopping bag to opt in on any order
+          $80+
+        </p>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+    <div class="imageContainer">
+      <div class="textBox">
+        <h2>PCS LOVE THE PERKS</h2>
+        <p>
+          “My consultant makes me feel remembered and appreciated! <br />
+          – Brianna
+        </p>
+      </div>
+      <div class="imageBox">
+        <img  class="image1"
+          src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-08.jpg?context=bWFzdGVyfHJvb3R8MTAwNjgzfGltYWdlL2pwZWd8aGMxL2hlOC8xMTAwNDM2NjUyMDM1MC5qcGd8ZDA3MDNmOWExM2FlNDYwM2E0YzVmYzdmYTZkNzlhOTc2OGJkNDRjYzhiN2E4ZTllYWUwMTNjZWRiNmI0NDY0NQ"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="imageContainer">
+      <div class="imageBox">
+        <img class="image1"
+          src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-09.jpg?context=bWFzdGVyfHJvb3R8OTg2Mzd8aW1hZ2UvanBlZ3xoMjMvaDM1LzExMDA0MzY2NTg1ODg2LmpwZ3w4YWRiM2ZkMThjNTJlM2U2NmY3OGIxOWVhNGFhYWFiYmJmNGQyMTdlZWRhMjMyNTQ1NjNjOGU3ZDRhZDgxMDAz"
+          alt=""
+        />
+      </div>
+      <div class="textBox">
+        <h2>PCS LOVE THE PERKS</h2>
+        <p>
+          “It's flexible. So, I'm not locked into buying something every month if I don't need it.”<br />
+          – Sherry
+        </p>
+      </div>
+    </div>
+    <div class="imageContainer">
+      <div class="textBox">
+        <h2>PCS LOVE THE PERKS</h2>
+        <p>
+          “I find out about new products first, get 10% off everything and get free shipping!!”<br />
+          – Jessica
+        </p>
+      </div>
+      <div class="imageBox">
+        <img class="image1"
+          src="https://www.rodanandfields.com/medias/20-PC-Perks-LP-Desktop-US-10.jpg?context=bWFzdGVyfHJvb3R8MTUzMzU5fGltYWdlL2pwZWd8aDA5L2g1Ny8xMTAwNDM2NjY1MTQyMi5qcGd8Yjk4MWNlMzg5ZjYzN2ViMGMyY2RmZTk3ODZkNTBjNzJiOTkxNjAzNjU1ZmIyZDk5ZGVhZTcyMjkzOWJkMzg2Nw"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="end-line">
+      <h1>ALREADY A CUSTOMER?</h1>
+      <p>
+        If you’re an R+F Customer and want to upgrade to PC Perks, simply enroll in your cart at checkout on your next order.
+      </p>
+       <br />
+      <hr />
+      <a href="#">PC Perks Terms & Conditions</a>
+    </div>
+    
+    <div class="container">
+        <div class="wrapper">
+            <button class="toggle">
+                WHAT IS A PC? ​​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>“PC” stands for Preferred Customer. When you join the Rodan + Fields PC Perks program, you become a PC, or a Preferred Customer. </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                How do I apply the coupon?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores error doloremque, quibusdam qui necessitatibus autem aperiam reprehenderit? Ipsum maiores dolore inventore ea. Accusantium fuga eius laboriosam iusto blanditiis doloremque ullam?</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                How do I become a member?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consectetur officiis labore commodi sunt ex praesentium dolor magnam asperiores reiciendis. Minus magnam nesciunt aliquid eos ipsam sequi recusandae quos incidunt.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+            
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="toggle">
+                HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? ​​​​​
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+            </div>
+        </div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+  </body>
+</html>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+    </script>
