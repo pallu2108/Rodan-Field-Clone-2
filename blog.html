@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The skincare source Blog | Rodan+Fields</title>
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+    ></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://mdbootstrap.com/docs/standard/content-styles/flags/">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+      
+       
+    <style>
+        #part{
+            text-align: center;
+        }
+        #part1 {
+            height: 600px;
+            width: 100%;
+            text-align: center;
+             /* border: 1px solid black;  */
+            grid-template-columns: repeat(3,1fr); 
+             grid-template-rows: auto; 
+            display: grid;
+            overflow: auto;
+            white-space: nowrap; 
+            overflow-x: auto;
+            overflow-y: hidden;
+            /* gap:20px; */
+         }  
+         #part1 > div {
+             height: 100%; 
+             width: 1480px;
+             /* border: 1px solid blue;  */
+             padding-right: 10px;
+             display: flex;
+             /* margin: auto;  */
+             justify-content: space-evenly;
+             
+         }
+         #part1 > div > div  {
+             height: 100%;
+             width: 100%;
+              /* border: 1px solid black;  */
+             text-align: left;
+             /* /* padding-left: 30px;  */
+             /* text-align: center; */
+             background-color: rgb(245, 243, 240);
+         }
+         .head {
+             font-size: 20px;
+             padding-left: 100px;
+             margin-top: 60px;
+             font-weight: lighter;
+         }
+         .head2{
+             font-size: 40px;
+             margin-top: 50px;
+             padding-left: 100px;
+             font-weight: lighter;
+
+         }
+         .head3{
+            font-size: 17px;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            color: grey;
+            margin-top: 50px;
+            padding-left: 100px;
+            font-weight: lighter;
+         }
+         .head4 {
+             text-decoration: underline;
+             padding-left: 100px;
+             margin-top: 50px;
+             font-weight: lighter;
+         }
+         #bpart2{
+            height: 550px;
+            width: 100%;
+            text-align: center;
+            /* border: 1px solid black; */
+            font-weight: lighter;
+         }
+         #part2 {
+            height: 80%;
+            width: 70%;
+            text-align: center;
+              /* border: 1px solid black;   */
+            grid-template-columns: repeat(12,1fr); 
+             grid-template-rows: auto; 
+            display: grid;
+            overflow-x: auto;
+            overflow-y: hidden;
+            /* white-space: nowrap;  */
+             gap:30px; 
+            text-align: center;
+            margin: auto;
+         }  
+         #part2 > div {
+             height: 100%; 
+             width: 300px;
+              /* border: 1px solid blue;   */
+             padding-right: 10px;
+             /* display: flex; */
+             /* margin: auto;  */
+             justify-content: space-evenly;
+               /* gap: 50px;   */
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+              border-radius: 10px;
+             
+         }
+         #part2 > div > img {
+             height: 65%;
+             width: 104%;
+               /* margin-top: 10px;    */
+           margin: auto;
+           border-top-left-radius: 10px;
+           border-top-right-radius: 10px;
+             
+         }
+         #part3 {
+             height: 600px;
+             width: 100%;
+             /* border: 1px solid black; */
+             display: flex;
+         }
+         #part3 > div {
+             /* border: 1px solid blue; */
+             width: 100%;
+         }
+         #data{
+             
+             padding-left: 25px;
+             font-weight: lighter;
+             background-color: rgb(230, 229, 227);
+             
+         }
+
+         #part4{
+             height: 80%;
+             width: 90%;
+             display: flex;
+             /* border: 1px solid black; */
+             margin: auto;
+             
+         }
+         #part4 > div {
+             width: 100%;
+             height: 80%;
+             margin-top: 70px;
+         }
+
+         #part4 > div > img {
+             height: 50%;
+             width: 100%;
+         }
+         #bpart4{
+             height: 600px;
+             width: 100%;
+             /* border: 1px solid black; */
+             text-align: center;
+         }
+         .data1 {
+             text-decoration: underline;
+         }
+         #part5{
+             height: 500px;
+             width: 100%;
+             display: flex;
+             text-align: center;
+             background-color: rgb(235, 233, 231);
+         }
+         #part5 > div {
+             height: 100%;
+             width: 100%;
+         }
+        #bpart6{
+            height: 350px;
+            width: 100%;
+            /* border: 1px solid black; */
+            /* display: flex; */
+            text-align: center;
+            
+        }
+        #part6{
+            height: 80%;
+            width: 80%;
+            display: flex;
+            text-align: center;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+        #part6 > div > img{
+            height: 70%;
+            width: 70%;
+            
+        }
+        ::-webkit-scrollbar{
+            height: 5px;
+            width: 5px;
+            /* border: 1px solid black; */ 
+            background: rgb(211, 209, 209);
+        }
+        ::-webkit-scrollbar-thumb{
+            /* background-color: black; */
+            border-radius: 5px;
+            background: #000;
+        }
+
+
+        /* top part */
+        #main-nav {
+                  padding: 15px 20px;
+                  background: white;
+                  /* border-bottom: 1px solid #222; */
+                  height: 50px;
+                  color: #3f3f3f;
+                  width: 100%;
+                  position: sticky;
+                  top: 0;
+                  z-index: 20;
+                }
+            
+               
+                #logo {
+                  padding-left: 440px;
+                }
+                #logo1{
+                    margin-left: 174px;
+                }
+              #nav2{
+                  display: flex;
+                  justify-content: space-between;
+              }
+              #nav3 {
+                display: flex;
+                justify-content: space-evenly;
+                width: 80%;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 5px;
+              }
+              #part8{
+                  text-align: center;
+                  height: 250px;
+
+              }
+
+
+              /* slider part */
+              #brand{
+    margin-bottom: 100px;
+}
+
+
+
+.carousel-cell img {
+    border: none;
+    width: 104%;
+
+    margin: -45px -10px -4px -55px;
+}
+.carousel {
+  background: white;
+  /* border: 1px solid red; */
+}
+
+.carousel-cell {
+  width: 20%;
+  height: auto;
+  margin-right: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #cceae5;
+
+
+}
+
+.carousel-cell.is-selected {
+  background: white;
+  /* border: 1px solid pink; */
+  background-color: white;
+  height: auto;
+    margin-top: 31px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+/* .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+ 
+} */
+
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 479px;
+    margin: 0px;
+    border-radius: 0;
+}
+
+.flickity-page-dots {
+    position: absolute;
+    width: 109%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+}
+#seconda{
+    margin: 0px 0px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+     height: 560px;
+    background-image: url("https://www.rodanandfields.com/en-us/medias/Best-Sellers-Image-Desktop.jpg?context=bWFzdGVyfHJvb3R8NjA5MTd8aW1hZ2UvanBlZ3xoOTcvaGNkLzEyODg5MTg3ODExMzU4LmpwZ3w2ZGZjZGYxNzg4ZDY2ODI2NzQyZTMyNGI2YmExYmRkNGNjYTBkNGI4MzE5OTIwM2M4M2Q1MGZlMmY1YmFjMDJk");
+}
+
+
+
+/* blur image */
+/* .fa-instagram:before {
+    content: "\f16d";
+    color: #0a0808;
+    font-size: 43px;
+   
+    padding: 5px 51px -15px 11px;
+    margin: 5px -10px 21px 17px;
+}
+
+.fimg:hover {
+  
+   filter: blur(5px); 
+    
+ }
+h1,p {
+		margin: 0;
+		padding: 0;
+	}
+	.fimg {		
+		color: white;
+		/* background: rgba(0,0,0,0.89); */
+		/* width: 155px;
+		height: 135px;
+		padding: 50px 15px 0 15px;
+		opacity: 1;
+		position: absolute;
+		bottom: 0px;
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+	.fimg {
+   	position: relative;
+		overflow: hidden;
+		width: 185px;
+		height: 185px;
+		margin: 50px auto;
+	}
+    .fimg:hover{
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-ms-filter: blur(1px);
+		-o-filter: blur(1px);
+		filter: blur(4px);
+		transform: scale(1.03);
+	}
+    .imgtext {		
+        color: white;
+    background: rgba(0,0,0,0.89);
+    width: 108px;
+    height: 0px;
+    margin: 95px 49px 103px -223px;
+    padding: 8px 18px 26px 26px;
+    opacity: 1;
+    position: absolute;
+    bottom: 0px;
+    margin-top: 22px;
+    font-family: ui-sans-serif;
+    FONT-SIZE: 9PX;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+	}
+	.imgtext:hover {
+		-webkit-opacity: 100;
+		opacity: 100;
+	} */ 
+
+
+    #brand{
+    height: 508px;
+    background-image: url("https://www.rodanandfields.com/en-us/medias/Best-Sellers-Image-Desktop.jpg?context=bWFzdGVyfHJvb3R8NjA5MTd8aW1hZ2UvanBlZ3xoOTcvaGNkLzEyODg5MTg3ODExMzU4LmpwZ3w2ZGZjZGYxNzg4ZDY2ODI2NzQyZTMyNGI2YmExYmRkNGNjYTBkNGI4MzE5OTIwM2M4M2Q1MGZlMmY1YmFjMDJk");
+}
+
+
+
+.carousel-cell img{
+    border: none;
+    width: 50%;
+    margin:9px 7px 8px 42px
+}
+/* .carousel-cell */
+
+.carousel {
+  background: white;
+  /* border: 1px solid red; */
+}
+
+.carousel-cell {
+  width: 20%;
+  height: auto;
+  margin-right: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 33px;
+
+
+}
+
+.carousel-cell.is-selected {
+  background: white;
+  /* border: 1px solid pink; */
+  background-color: white;
+  height: auto;
+    margin-top: 31px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+  
+}
+.carousel-cell img:hover
+{
+    opacity: 1;
+}
+ img:hover {
+    /* webkit-filter: blur(4px);  */
+   filter: blur(5px); 
+    
+ }
+h1,p {
+		margin: 0;
+		padding: 0;
+	}
+	.fimg {		
+		color: white;
+		/* background: rgba(0,0,0,0.89); */
+		width: 155px;
+		height: 135px;
+		padding: 50px 15px 0 15px;
+		opacity: 1;
+		position: absolute;
+		bottom: 0px;
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+	.fimg {
+   	position: relative;
+		overflow: hidden;
+		width: 185px;
+		height: 185px;
+		margin: 50px auto;
+	}
+    .fimg:hover{
+		-webkit-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-ms-filter: blur(1px);
+		-o-filter: blur(1px);
+		filter: blur(4px);
+		transform: scale(1.03);
+	}
+    .imgtext {		
+        color: white;
+    background: rgba(0,0,0,0.89);
+    width: 108px;
+    height: 0px;
+    margin: 34px 27px 146px -196px;
+    padding: 12px 18px 26px 26px;
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    font-family: ui-sans-serif;
+    FONT-SIZE: 9PX;
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+	}
+	.imgtext:hover {
+		-webkit-opacity: 100;
+		opacity: 100;
+	}
+	
+
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 479px;
+    margin: 0px;
+    border-radius: 0;
+}
+#seconda{
+    margin: 0px 0px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    
+     height: 478px;
+    background-image: url("https://www.rodanandfields.com/en-us/medias/Best-Sellers-Image-Desktop.jpg?context=bWFzdGVyfHJvb3R8NjA5MTd8aW1hZ2UvanBlZ3xoOTcvaGNkLzEyODg5MTg3ODExMzU4LmpwZ3w2ZGZjZGYxNzg4ZDY2ODI2NzQyZTMyNGI2YmExYmRkNGNjYTBkNGI4MzE5OTIwM2M4M2Q1MGZlMmY1YmFjMDJk");
+}
+.carousel-cell img {
+    /* border: 1px solid black; */
+    width: 70%;
+}
+#underline{
+    font-size: 30px;
+}
+.title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    margin: -19px 0px 0px 0px;
+    
+}
+ .def{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 26px;
+    color: grey;
+
+
+
+ }
+ .secondc{
+    height: 272px;
+    width: 255px;
+ }
+ .btup{
+    margin-bottom: -3px;
+    margin-top: -12px;
+ }
+ .fa-instagram:before {
+    content: "\f16d";
+    color: #0a0808;
+    font-size: 43px;
+    /* margin-top: 20px; */
+    padding: 5px 51px -15px 11px;
+ 
+    margin: 15px 6px 50px 33px;
+}
+
+                </style>
+            
+                <title>Rodan+Fields</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+            
+               
+                <link rel="stylesheet" type="text/css" href="index.css">
+            
+            
+                <title>Rodan+Fields</title>
+               
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
+
+                                      
+    </style>
+</head>
+<body>
+    <div id="main-nav">
+        <div id="main-nav1">
+            
+            <div id="find-text"></div>
+            
+            <div id="logo">
+                <a href="index.html"><img id="logo1" src="https://www.rodanandfields.com/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA"></a>
+            </div>
+        <hr>
+        <div id="navbar2">
+            <div id="nav2">
+                <h1 style="font-size: 40px;font-weight: lighter;padding-left: 500px;margin-top: -3px;">THE SKINCARE SOURCE</h1>
+              <p>  <i style="padding-right: 200px;margin-top: 3px;" class="fa-solid fa-magnifying-glass"></i> </p>
+            </div>
+            <div id="nav3">
+                <p>DOCTOR'S NOTES</p>
+                 <p>LIFESTYLE</p>
+                <p>PRO TIPS</p>
+                 <p>SCIENCE OF SKINCARE</p>
+                 <p>SKINCARE GUIDES</p>
+                 <p>SKINCARE CONCERNS</p>
+
+            </div>
+        </div>       
+    <div id="part1">
+        <div>
+            <div>
+                <h4 class="head">DOCTOR'S NOTES</h4>
+                <h1 class="head2">Rodan + Fileds Multi- </br> Med Therapy Approach</h1>
+                <h3 class="head3">OUR FOUNDERS DISCUSS THE MAGIC BEHIND WHAT</br> MAKES R+F SKIN CARE WORK.</h3>
+                <h3 class="head4">READ MORE</h3>
+            </div>
+            <div>
+                <img style="height: 100%; width: 100%;" src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2020/08/06_Rodan_Fields_3333_V7_1100x1100-1024x1024.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4 class="head">PRO TIPS</h4>
+                <h1 class="head2">With The Right Lash </br>Care,You Won't Miss Your</br>Extensions</h1>
+                <h3 class="head3">PRO-APPROVED TIPS ON HOW TO GET LASHES SO LONG </br>YOU WON'T BELIEVE YOUR EYES.</h3>
+                <h3 class="head4">READ MORE</h3>
+            </div>
+            <div>
+                <img style="height: 100%; width: 100%;" src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2020/08/280119_ROD_08_035_FINAL_1100X1100-1024x1024.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div>
+                <h4 class="head">SCIENCE OF SKINCARE</h4>
+                <h1 class="head2">Why Dermotogists</br>Recommend Niacinamide</br>Skinare</h1>
+                <h3 class="head3">FROM REGULATING DIGESTION TO IMPROVING SKIN,</br>VITAMIN B3/NIACINAMIDE IS A MUST.</h3>
+                <h3 class="head4">READ MORE</h3>
+            </div>
+            <div>
+                <img style="height: 100%; width: 100%;" src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2020/10/Niacinamide-Image.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</br>
+</br>
+    <div id="bpart2">
+        <h1 style="font-weight: lighter;">Skincare Blog post </h1>
+        <div id="part2">
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/11/Blog_TRFS-Get-Energized-Looking-Skin-image.jpg" alt="">
+            <p>March 22nd,2022</p>
+            <h3>Get Energized-Looking with Total</br> RF Serum</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/12/Dec_HolidayGiftGuide.jpg" alt="">
+             <p>December 4th,2021</p>
+             <h3>Rodan + Fields Holiday Gift Guide 2021</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/11/Blog_Ingredients-for-the-Skin-image.jpg" alt="">
+            <p>November 24th,2021</p>
+            <h3>Ingridients for the Skin</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/11/Blog_Skincare-to-be-Thankful-For.jpg" alt="">
+            <p>November 23rd,2021</p>
+            <h3>Thankful for Life-Changing Skincare</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/11/Blog_Fall-Skincare-Routine-image.jpg" alt="">
+            <p>November 19th,2021</p>
+            <h3>How to create Your Perfect Fall </br> Skincare Routine</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/10/bg.jpg" alt="">
+            <p>October 21st,2021</p>
+            <h3>What is Butylene Glycol?</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/08/Blog_Benefits-of-Stacking-Skincare-image.jpg" alt="">
+            <p>October 12th,2021</p>
+            <h3>All About Our Reverse Brightening</br>Regimen</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/09/Blog_Find-Your-Skincare-Routine-image-1097x1100.jpg" alt="">
+            <p>September 24th,2021</p>
+            <h3>Find Your Best Skincare Routine</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/09/Blog_Why-Am-I-Breaking-Out-image.jpg" alt="">
+            <p>September 24th,2021</p>
+            <h3>Why Am i Breaking out?6 unexpected</br>Reasons (& Solutions)</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/09/Blog_5-Minute-Glow-image-1097x1100.jpg" alt="">
+             <p>September 8th,2021</p>
+             <h3>5-Minute Glow Routine</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/09/Blog_Active-Ingredient-in-Skincare-image.jpg" alt="">
+            <p>September 6th,2021</p>
+            <h3>What is an Active Ingridient in Skincare?</h3>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/09/Blog_The-Best-Aftershave-Skincare-Routine-image-1100x1100.jpg" alt="">
+            <p>September 1st,2021</p>
+            <h3>The Best Aftershave Skincare Routine</h3>
+        </div>
+    </div>
+    </div>
+</br>
+
+    <div id="part3">
+        <div>
+            <img style="height: 100%; width: 100%;" src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2020/08/Mask_1100x1100-1024x1024.jpg" alt="">
+        </div>
+        <div id="data">
+        </br>
+        </br>
+        </br>
+            <p>PRO TIPS</p>
+        </br>
+        
+            <h1 style="font-weight: lighter; font-size: 40px;">Pro Tips on How To Avoid </br> Maskne</h1>
+        </br>
+        </br>
+            <h3 style="font-weight: lighter;">MASKNE IS REAL. HERE'S WHAT TO DO ABOUT THOSE </br> PESKY CHIN PIMPLES</h3>
+         </br>
+        </br>
+
+        <h3 style="text-decoration: underline;">READ MORE</h3>
+        </div>
+    </div>
+</br>
+</br>
+    <div>
+        <div id="bpart4">
+            <h1 style="font-weight: lighter;">Meet Your Skin</h1>
+        <h3 style="font-weight: lighter;">FIND THE IDEAL MASK FOR YOUR SKIN CONCERN AND MULTI-MASK LIKE A PROFFESSIONAL</h3>
+        
+        <div id="part4">
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/rechargeMask.jpg" alt="">
+            <h3 class="data1">RECHARGE</h3>
+            <p>Detoxify with Charcoal while </br>Mango Seed Butter, Coconut + </br> Avocado Oil moisturizer</p>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/reverseMask.jpg" alt="">
+            <h3 class="data1">REVERSE</h3>
+            <p>Fueled with Retinal to dial up </br>skin's radiance instantly while </br>it evens skin tone over time </p>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/sootheMask.jpg" alt="">
+            <h3 class="data1">SOOTHE</h3>
+            <p>Get softer ,fresher-feeling skin</br>instantly while calming </br>sensitivity + redness over time</p>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/redefineMask.jpg" alt="">
+            <h3 class="data1">REDEFINE</h3>
+            <p>Smooth skin with exfoliating </br>Jojoba Beads while improving</br>fine lines + wrinkles over time </p>
+        </div>
+        <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/unblemishMask.jpg" alt="">
+            <h3 class="data1">UNBLEMISH</h3>
+            <p>Reduce Oil+ shine instantly &</br>prevent breakouts over time</br>with acne-fighting formula</p>
+        </div>
+    </div>
+   </div>
+</div>
+</br>
+
+    <div id="part5">
+    
+        <div>
+            <h3 style="margin-top: 70px; font-weight: lighter;">SKINCARE GUIDES</h3>
+        </br>
+        </br>
+    
+            <h1 style="font-weight: lighter;font-size: 40px;">Get Energized-Looking</br>Skin with Total RF Serum</h1>
+        </br>
+        </br>
+            <h3 style="font-weight: lighter;">LEARN ALL THERE IS TO KNOW ABOUT OUR TOTAL RF </br> SERUM</h3>
+        </br>
+        </br>
+
+            <h3 class="data1">READ MORE</h3>
+        </div>
+        <div>
+        <img style="height: 100% ;width: 100%;" src="https://www.rodanandfields.com/en-us/blog/wp-content/uploads/2021/11/Blog_TRFS-Get-Energized-Looking-Skin-image.jpg" alt="">
+        </div>
+    </div>
+</br>
+    <div id="bpart6">
+      <div><h1>Blog Categories</h1></div>
+      <div id="part6">
+          <div>
+              <img src="https://www.rodanandfields.com/en-us/assets/blog/doctors-notes.svg" alt="">
+              <h3 class="data1">DOCTOR'S NOTES</h3>
+          </div>
+          <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/lifestyle.svg" alt="">
+            <h3 class="data1">LIFESTYLE</h3>
+          </div>
+          <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/pro-tips.svg" alt="">
+            <h3 class="data1">PRO TIPS </h3>
+          </div>
+          <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/science-of-skincare.svg" alt="">
+            <h3 class="data1">SCIENCE OF SKINCARE</h3>
+          </div>
+          <div>
+            <img src="https://www.rodanandfields.com/en-us/assets/blog/skincare-guides.svg" alt="">
+            <h3 class="data1">SKINCARE GUIDES</h3>
+          </div>
+      </div>
+    </div>
+    <hr>
+    <div id="brand1">
+        <div class="carousel" data-flickity='{ "groupCells": true  ,"wrapAround": true ,"autoPlay": false }'>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/63/17936354605688863/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+                 
+                </span>
+            </div>
+            <div class="carousel-cell">
+                <img  class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/51/17914183256051851/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/94/17878795901249094/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/30/17928229432858630/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/69/17869295408638069/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/21/17918148008057821/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/63/18192350263192663/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+           
+            <div class="carousel-cell">
+                <img class="secondc fimg" src="https://cdn-yotpo-images-production.yotpo.com/instagram/85/18124584601232185/standard_resolution.jpg" alt="">
+                <span class="imgtext">
+                    <h1>SHOP NOW</h1>
+                    <br>
+                    <i  class="fa-brands fa-instagram"></i>
+            </div>
+            
+          </div>
+
+<br />
+<br />
+
+    <div id="part8">
+        <h2>KEEP IN TOUCH</h2>
+    </br>
+        <div style="font-size: 25px;">
+            <i class="fa-brands fa-facebook-f"></i>&ensp; &ensp; &ensp;&ensp;
+                 <i class="fa-brands fa-twitter"></i>&ensp; &ensp; &ensp;&ensp;
+                 <i class="fa-brands fa-instagram-square"></i>&ensp; &ensp; &ensp;&ensp;
+                 <i class="fa-brands fa-youtube"></i>&ensp; &ensp; &ensp;&ensp;
+                 <i class="fa-brands fa-pinterest-p"></i>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+    
+
+</script>
+
+
+
+<script src="https://kit.fontawesome.com/b8b48f063b.js" crossorigin="anonymous"></script>
