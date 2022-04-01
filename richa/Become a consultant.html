@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+         <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        #you{
+            height: 500px;
+            width: 95%;
+            justify-content: center;
+            margin: auto;
+            margin-left: 50px;
+        }
+
+        #first{
+            /* border: 1px solid black; */
+            height: 600px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+
+        }
+        #seconda{
+            margin: 0px 0px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    height: 542px;
+
+        }
+
+
+        #firsta{
+     
+    height: 541px;
+    width: 859px;
+    padding: 2px 64px 0px 67px;
+    background-color: #9fbbd0;
+
+        }
+        #firsta>h2{
+            /* border: 1px solid rgb(255, 115, 0); */
+    height: 361px;
+    width: 365px;
+    font-size: 52px;
+    line-height: 57px;
+    /* font-style: normal; */
+    font-family: ui-sans-serif;
+    font-weight: normal;
+   
+
+        }
+        #firsta>p{
+            /* border: 1px solid pink; */
+    height: auto;
+    width: 335px;
+    line-height: 34px;
+    font-weight: bold;
+    margin-top: -59px;
+        }
+        #Btn1{
+            background-color: white;
+    width: 325px;
+    height: 53px;
+    border-radius: 14px;
+
+        }
+        #second{
+            /* border: 1px solid black; */
+            height: autopx;
+            width: 90%;
+            margin: auto;
+            display: flex;    
+            background-color: #e2d3cc;
+        }
+        #second>div>img{
+            width: 433px;
+    height: 481px;
+        }
+        #secImg{
+            width: 468px;
+            height: 312px;
+        }
+        #parent{
+            /* border: 1px solid black; */
+    height: 369px;
+    width: 902px;
+    margin-left: 25px;
+    margin-right: -2px;
+    display: flex;
+    margin: auto;
+    background-color: #e2d3cc;
+        }
+.child{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: auto;
+    flex-direction: row;
+    margin-left: 18px;
+    background-color: #e2d3cc;
+}
+#para{
+    padding-right: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    margin-top: 4px;
+    padding-bottom: 24px;
+    font-family: ProximaNovaLight,Arial,Sans-Serif;
+    /* font-size: 1.6rem; */
+    font-weight: 300;
+    color: #222;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+  #h51{
+    font-family: ProximaNovaMedium,Arial,Sans-Serif;
+    /* font-size: 1.6rem; */
+    /* font-weight: 500; */
+    color: #222;
+    line-height: 20px;
+    letter-spacing: .5px;
+  }
+  #head{
+      font-family: Arial,Sans-Serif ;
+      background-color: #e2d3cc;
+      margin-left: 18px;
+      line-height: 20px;
+    letter-spacing: .5px;
+    font-weight: lighter;
+    margin-bottom: 54px;
+
+  }
+  #start{
+    font-family: Arial,Sans-Serif;
+    background-color: #e2d3cc;
+    margin-left: 18px;
+    font-size: 28px;
+  }
+  #par{
+    
+   
+    font-family: ProximaNovaLight,Arial,Sans-Serif;
+    /* font-size: 1.6rem; */
+    font-weight: 300;
+    color: #222;
+    line-height: 24px;
+    letter-spacing: .5px;
+    margin-bottom: -15px;
+
+  }
+
+
+  /* part 3 */
+
+
+.carousel-cell img{
+    border: none;
+    width: 50%;
+    margin:9px 7px 8px 42px
+}
+/* .carousel-cell */
+
+.carousel {
+  background: white;
+  /* border: 1px solid red; */
+}
+
+.carousel-cell {
+  width: 20%;
+  height: auto;
+  margin-right: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: #cceae5;
+
+
+}
+
+.carousel-cell.is-selected {
+    background: white;
+    /* border: 1px solid pink; */
+    background-color: white;
+    height: 355px;
+    margin-top: 10px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+/* .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+ 
+} */
+
+/* .flickity-page-dots {
+    margin: -6px;
+} */
+/* dots are lines */
+
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 718px;
+    margin: 0px;
+    margin-bottom: -34px;
+    border-radius: 0;
+}
+#seconda{
+    margin: 0px 0px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    height: 541px;
+   
+}
+.carousel-cell img {
+    /* border: 1px solid black; */
+    width: 70%;
+}
+#underline{
+    font-size: 30px;
+}
+.title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    background-color: #cceae5;
+    
+}
+ .def{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 34px;
+    color: grey;
+
+
+
+ }
+ .secondc{
+    height: 272px;
+    width: 255px;
+ }
+ .btup{
+    margin-bottom: -3px;
+    margin-top: -12px;
+ }
+.font{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: lighter;
+    /* background-color: #cceae5; */
+}
+#community{
+    height: 422px;
+    width: 105%;
+    /* border: 1px solid red; */
+    margin: auto;
+    background-color: #cceae5;
+}
+#commu{
+    text-align: center;
+    margin-bottom: -5px;
+    background-color: #cceae5;
+}
+#fifth{
+    display: flex;
+    /* border: 1px solid black; */
+    /* height: 300px; */
+    width: 86%;
+    margin: auto;
+    margin-top: 89px;
+    margin-left: 92px;
+    height: 368px;
+}
+.child1{
+    width: 30%;
+    height: 200px;
+    /* border: 1px solid red; */
+    margin-top: 67px;
+    margin: auto;
+
+}
+#h1{
+    margin-bottom: -141px;
+    margin-top: 92px;
+    text-align: center;
+}
+  </style>
+<body>
+
+<iframe id="you" src="https://youtube.com/embed/bkcHI5byXOw">
+</iframe>
+<div id="first">
+    <div id="firsta">
+        
+            <h2>Build a Business. Join a Community. Make a Difference.</h2>
+            <p>Join the #1 Premium Skincare Brand in the U.S. 2016-2020* and start changing skin + lives. </p>
+            <button id="Btn1">SHOP NOW</button>
+
+    </div>
+    <br />
+    <div>
+        <img id ="seconda" src="https://www.rodanandfields.com/en-us/medias/LandingPage-Hero-Desktop-947x600.jpg?context=bWFzdGVyfHJvb3R8NTQ5OTg4fGltYWdlL2pwZWd8aDkyL2gzNy8xMzkxNjM2Nzc0OTE1MC5qcGd8OGZhNGVlOGVkYTQ2MWNkNDRkNjQ3ZTNiODNkZGZlNjc2MDY1YjIwOGY4YTNkNDkxZDllMWQwZTVjMzdhOTg0Ng" alt="">
+    </div>
+</div>
+<div id="second">
+    <div>
+        <img id="secImg" src="https://www.rodanandfields.com/en-us/medias/3Values-468x468.jpg?context=bWFzdGVyfHJvb3R8MjI1NTYxfGltYWdlL2pwZWd8aDBkL2g3ZC8xNDI5NTkxMDY3ODU1OC5qcGd8Y2M0MTYwZmM2NjNmZDlmMjNhNWVmMGFhOWU1NjExYjUwN2I5MzdkMmIxNWNjNDE0MDViOTYyZGVhMTlhMDJmNQ" alt="">
+    </div>
+    <div>
+        <p id="start">3 Reasons to Become an R+F Consultant</p>
+        <div>
+            <h4 id="head">It’s all up to you! Start a flexible business—your schedule, your terms—with built in community + expert support. You decide the level of effort you want to put in, because you do it your way – your business, your goals.</h4>
+            <div id="parent">
+                <div class="child">
+                    <h5 id="h51">Opportunity to Make Extra Cash</h5>
+                    <p id="para">
+                        You can start earning right away while you grow with a full support system – an easy-to-use app to track your sales and customers, simple + effective trainings, and access to expertise. Plus, it’s a low cost of entry + there’s no inventory to carry.
+                    </p>
+                    <br>
+                <p >
+                  <u>  How Compensation Works</u></p>
+                </div>
+                <div class="child" >
+                    <h5 id="h51">Life-Changing Skincare</h5>
+                    <p id="para">
+                        Our formulas are proven to deliver life-changing visible results. That’s why we have 20+ industry awards and are the #1 Premium Skincare Brand in the U.S.* 2016-2020.
+                         
+                       <div id="par" > *Source Euromonitor International Limited; Beauty and Personal Care 2021 Edition</div>
+                    </p>
+                    <br>
+                    <br>
+                <p >
+                  <u>The R+F Difference</u></p>
+                </div>
+                <div class="child">
+                    <h5 id="h51">Poised for Growth</h5>
+                    <p id="para">
+                        Be part of a billion-dollar brand with major growth potential. The global skincare market is valued at $139B. We’re only in 4 countries right now with big plans to expand
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                <p >
+                  <u>R+F By Numbers</u></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- part 3 -->
+<br>
+<br>
+
+<div id="community">
+    <h2 id="commu">OUR COMMUNITY</h2>
+    <div id="brand">
+        <div  data-flickity='{ "groupCells": true  ,"wrapAround": true ,"autoPlay": false}'>
+            
+                    <div class="carousel-cell">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUduB92f6mqWY_kcl7_weicufC7qXFAgg55Q&usqp=CAU" alt="">
+                     
+                      <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                      
+                      Azadeh, U.S.
+                      <br>
+                      R+F Independent Consultant
+                      
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUduB92f6mqWY_kcl7_weicufC7qXFAgg55Q&usqp=CAU" alt="">
+                     
+                        <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                      
+                        Azadeh, U.S.
+                        <br>
+                        R+F Independent Consultant
+                      
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPOr1vz6Ab6LKz1qsUSAbfHdS0dh2ZaAESmA&usqp=CAU" alt="">
+                     
+                        <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                      
+                        Azadeh, U.S.
+                        <br>
+                        R+F Independent Consultant
+                      
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="https://img.freepik.com/free-photo/group-confident-young-businesswomen-looking-camera_74855-4275.jpg" alt="">
+                     
+                      <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                      
+                      Azadeh, U.S.
+                      <br>
+                      R+F Independent Consultant
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYmE4k9QhjhglzIwEiOgK7TkMLfzmwhG8aEg&usqp=CAU" alt="">
+                     
+                      <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                      
+                      Azadeh, U.S.
+                      <br>
+                      R+F Independent Consultant
+                      
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYmE4k9QhjhglzIwEiOgK7TkMLfzmwhG8aEg&usqp=CAU" alt="">
+                     
+                      <p class="def">“Everyone wants you to win. Your peers are your cheerleaders.”</p>
+                    
+                      Azadeh, U.S.
+                      <br>
+                      R+F Independent Consultant
+                      
+                    </div>
+                 
+                 
+               
+                  </div>
+
+
+                  <br>
+                  <br>
+                      <h1 id="h1">Get Started in 3 Simple Steps</h1>
+                  <div id="fifth">
+                    
+                      <div class="child1">
+                          <div><img src="https://www.rodanandfields.com/en-us/medias/Getting-Started-Life-Changing-Products-Desktop.jpg?context=bWFzdGVyfHJvb3R8MjY5Mzh8aW1hZ2UvanBlZ3xoZTkvaDdjLzE0MzcyMDYxODM5MzkwLmpwZ3wwNGFmZmMyY2RmNTg3NWQxYjhlMDAxYzQ0YmZmOWI2YjhmNGMwNjBiNzQwMWZlODI3NjVmYTI0NjAzMjIzMDUz" alt=""></div>
+                        <h5 class="font">Buy Your Business Starter Pack</h5>
+                        <p class="font">Get everything you need to jump start your bussniess for a low one time fee of just $74</p>
+                      </div>
+                      <div class="child1">
+                        <div><img src="https://www.rodanandfields.com/en-us/medias/Getting-Started-Resources-And-Support-Desktop.jpg?context=bWFzdGVyfHJvb3R8Nzg4MDB8aW1hZ2UvanBlZ3xoNTkvaGJmLzE0MzcyMDYxOTA0OTI2LmpwZ3w2NzEyMzc2ZjJmYjhhM2RlY2VmMjQ2Mjc5YTg0ZDFhNWIwMjFhYTIxYTRjMGE3MzJjYTgzYjI3ODZkMDZmYTBj" alt=""></div>
+                        <h5 class="font">Buy Your Business Starter Pack</h5>
+                        <p class="font">Get everything you need to jump start your bussniess for a low one time fee of just $74</p>
+                      </div>
+                      <div class="child1">
+                        <div><img src="https://www.rodanandfields.com/en-us/medias/Getting-Started-Life-Changing-Products-Desktop.jpg?context=bWFzdGVyfHJvb3R8MjY5Mzh8aW1hZ2UvanBlZ3xoZTkvaDdjLzE0MzcyMDYxODM5MzkwLmpwZ3wwNGFmZmMyY2RmNTg3NWQxYjhlMDAxYzQ0YmZmOWI2YjhmNGMwNjBiNzQwMWZlODI3NjVmYTI0NjAzMjIzMDUz" alt=""></div>
+                        <h5 class="font">Buy Your Business Starter Pack</h5>
+                        <p class="font">Get everything you need to jump start your bussniess for a low one time fee of just $74</p>
+                      </div>
+                  </div>
+                  <h1 id="middle">Want To Learn More</h1>
+<br>
+<br>
+
+                  <div class="container">
+                    <div class="wrapper">
+                        <button class="toggle">
+                            WHAT IS A PC? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p class="inside">“PC” stands for Preferred Customer. When you join the Rodan + Fields PC Perks program, you become a PC, or a Preferred Customer. </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            WHAT IS THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p class="inside">PC Perks is a subscription program that offers a 10% discount on all orders, free shipping on orders of $80 or more (after applying the 10% PC discount), a Perks Present, and deliveries every 60 days with the flexibility to change future products and shipment dates in your account settings. PC Perks members also gain access to exclusive offers, promotions, a priority Customer Service line and receive a 60-day Satisfaction Guarantee on all products. You can join PC Perks for a one-time fee of $19.95 with a minimum subscription order of $80 or more.</p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DO I ENROLL IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>You may enroll in PC Perks through a Consultant’s Personal Website or through the R+F website at the time of checkout for a one-time, non-refundable $19.95 enrollment fee. Your initial subscription order must total a minimum of $80, after the 10% PC Perks discount is applied, and you’ll be asked to provide the required enrollment information, including a valid credit card. </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DO I UPGRADE TO A PC PERKS ACCOUNT? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>If you are an existing Customer and would like to upgrade to Preferred Customer status, simply enroll in your cart at checkout on your next order </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            DO I HAVE TO CHOOSE A CONSULTANT WHEN I ENROLL AS A PREFERRED CUSTOMER? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>Yes, you must choose a Consultant at checkout when you enroll in the PC Perks program. Your Consultant can answer questions you have about PC Perks, offer personalized skincare recommendations and more </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            WHAT IF I DON’T KNOW A CONSULTANT? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>If you don’t know any Consultants, we’ll provide the names of a few at checkout who you can choose from based on various factors such as your location.   </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <button class="toggle">
+                            HOW DOES FREE SHIPPING WORK IN THE PC PERKS PROGRAM? 
+                            <i class="fas fa-plus icon"></i>
+                        </button>
+                        <div class="content">
+                            <p>For Preferred Customers, shipping is free on all orders of $80 or more, after the 10% PC Perks discount is applied. When you log in to the R+F website or your Consultant’s Personal Website, you will identify yourself as a PC by entering your email address and the password that you selected when enrolling in PC Perks. Then you can view and access the PC pricing and receive free shipping on all orders of $80 or more, whether it is a subscription order or a one-time orde </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Script-->
+                
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+   
+</script>
+<script src="script.js"></script>
+
