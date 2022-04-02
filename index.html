@@ -154,6 +154,8 @@
         /* border: 1px solid black; */
         height: 516px;
         margin-left: 45px;
+        position: absolute;
+         top: 50px; left: 50px;
     }
         #top{
             /* border: 1px solid black; */
@@ -360,8 +362,10 @@
             
         }
         img {
-            height: 80%;
-            width: 100%;
+            height: 123%;
+    width: 100%;
+    margin-top: -103px;
+
         }
         .subheading {
              text-align: center;
@@ -471,7 +475,84 @@
             background: #000;
         }
         
+/* main */
+main {
+  margin-top: 134px;
+}
+main .container {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
 
+main .container .left {
+  background-color: rgb(249, 246, 244);
+}
+
+main .container .left .inner {
+  width: 66%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner > h1 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 400;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.inner > h1 + p {
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+.inner > p + p {
+  font-size: 12px;
+}
+.inner > p + a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #222;
+}
+
+.right > img + img {
+  display: none;
+}
+
+.btn {
+  margin-top: 30px;
+  font-weight: 600;
+  color: #222;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 4px;
+  border: solid 1px #222;
+  background-color: #fff;
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow: 0 0 5px 2px #80aec9, 0 0 5px 0 rgb(0 0 0 / 50%) inset;
+}
+
+main > a {
+  position: absolute;
+  color: #111;
+  margin-top: 6px;
+  text-decoration: underline;
+  right: 40px;
+}
+main .container .left {
+    background-color: rgb(249, 246, 244);
+    margin-top: -102px;
+}
     </style>
 </head>
 <body> 
@@ -519,7 +600,7 @@
     </div>
     <div id="navbar2">
         <div id="nav2">
-            <a href="./shoop.html" target="blank"> <p> SHOP</p>  </a>
+            <a href="prattttttttt/shoop.html"><p>SHOP NOW</p></a>
             <a href=""><p>BEST SELLERS</p></a>
             <a href=""> <p>FEATURED</p></a>
             <a href="../richa/our investors/investors.html"><p>OUR STORY</p></a>
@@ -530,9 +611,10 @@
     </div>
 
 
-   <div id="top">
-    <img id="topfirst" src="https://www.rodanandfields.com/en-us/medias/22-HP-PC-Perks-Desktop.gif?context=bWFzdGVyfHJvb3R8NTkxMzczfGltYWdlL2dpZnxoZDIvaGYwLzE0ODU2NzM0MjEyMTI2LmdpZnw5MjEwMzI1YjAyODNiYzgwMDdhMTI5OGQ0YjA1MjlhZTg2ZjE0ODJlNDZjNTUwZDg2YTQ2MzFkMmMxMTRkZjAx" alt="alternative text" style="position: relative;" /><span style="position: absolute; top: 50px; left: 50px;">
-        <div id="container1">
+   <!-- <div id="top">
+    <img id="topfirst" src="https://www.rodanandfields.com/en-us/medias/22-HP-PC-Perks-Desktop.gif?context=bWFzdGVyfHJvb3R8NTkxMzczfGltYWdlL2dpZnxoZDIvaGYwLzE0ODU2NzM0MjEyMTI2LmdpZnw5MjEwMzI1YjAyODNiYzgwMDdhMTI5OGQ0YjA1MjlhZTg2ZjE0ODJlNDZjNTUwZDg2YTQ2MzFkMmMxMTRkZjAx" alt="alternative text" style="position: relative;" /> -->
+    <!-- <span style="position: absolute; top: 50px; left: 50px;"> -->
+        <!-- <div id="container1">
           
                 <div id="rfirst">
                     <h1>The Perks of Products that Work</h1>
@@ -550,7 +632,38 @@
               
             
         </div></span>
-   </div>
+   </div> -->
+
+    <!-- main section  -->
+   
+    <main>
+      <div class="container">
+        <div class="left">
+          <div class="inner">
+            <h1>The Perks of Products that Work</h1>
+            <p>
+                Join PC Perks for FREE ($19.95 value) and get 10% off every order, free shipping + more
+            </p>
+            <p>Enroll in your cart at checkout. Offer valid through March 31. See Terms & Conditions</p>
+            <!-- <p>*Euromonitor, see details:</p> -->
+          
+            <button class="btn">SHOP NOW</button>
+          </div>
+        </div>
+        <div class="right">
+          <img
+            src="https://www.rodanandfields.com/en-us/medias/PC-Launch-Phase-1-Widescreen-947x600.jpg?context=bWFzdGVyfHJvb3R8NTIwODN8aW1hZ2UvanBlZ3xoMGIvaGJlLzE0Njc5MzYwNzMzMjE0LmpwZ3xkYzc5NTMzM2EyZjA2ZGJhYzQ4OWE5NWMwOWFmZjNmZmNhY2U0MWI3YzQwNDU0YjNjYmI4NDc5OTNlY2I2OTBk"
+            alt="home_banner"
+          />
+          <!-- <img
+            src="https://www.rodanandfields.com/en-us/medias/22-Feb-BMSM-HP-MOBILE-US-v1.gif?context=bWFzdGVyfHJvb3R8NDA5MjB8aW1hZ2UvZ2lmfGhlNS9oZTgvMTQ2MDQwOTY3MzMyMTQuZ2lmfDA4NzZiYTBmNDdhOGZhYmM5NTJiMGFjYjExZjJlYWFhNzA4YzI4NTc1NDcwYzlmNGQ0YjZhZmZlNTAzYzgyNjY"
+            alt="home_banner"
+          /> -->
+        </div>
+      </div>
+      <a href="#">Shop Best Sellers</a>
+    </main>
+
          <br />  
           <br />
           <!--second part  -->
