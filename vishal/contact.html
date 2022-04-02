@@ -109,7 +109,12 @@ h1 {
   font-size: 25px;
   font-weight: lighter;
 }
- 
+ #edit1{
+     font-size: 20px;
+     margin-top: 20px;
+     color: blue;
+     margin-right: 10px;
+ }
 </style>
 <body>
     <nav>
@@ -139,7 +144,12 @@ h1 {
         <div id="rbox">
             <div id="edit">
                 <p>Order Summary</p>
-                <h3>Edit</h3>
+                <div
+                onclick="window.location.href='./Checkoutpage.html'"
+                id="edit1"
+              >
+                Edit
+              </div>
             </div>
  <div id="inner">
  <div id="container">
@@ -148,7 +158,7 @@ h1 {
  <div id="total">
  <div>
      <p>Subtotal</p>
-     <p id="subtotal">$148.00</p>
+     <p id="subtotal">$0</p>
  </div>
  <div>
      <p>Estimated Tax</p>
@@ -161,7 +171,7 @@ h1 {
  <hr>
  <div>
  <h3>TOTAL <span>(2 Items)</span></h3>
- <p id="estimate">$148.00</p>
+ <p id="estimate">$0</p>
 </div>
 </div>
         </div>
