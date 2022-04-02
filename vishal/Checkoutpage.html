@@ -141,6 +141,7 @@ width: 400px;
 #sym>img{
  width: 30px;
  height: 31px;
+ object-fit: cover;
 }
 #sym{
     margin-top: 10px;
@@ -149,6 +150,7 @@ width: 400px;
 #we{
     font-size: 20px;
    margin-top: -0px;
+   object-fit: cover;
 }
 #main2 >button{
    margin-left: 50px;
@@ -272,9 +274,9 @@ color: white;
 
 </body>
 <script>
-    var productbag=JSON.parse(localStorage.getItem("productbag"))
+    var productbag=JSON.parse(localStorage.getItem("Cartvalue"))||[]
  var Total=productbag.reduce(function(sum,el,i){
-      return sum+el.price;
+      return sum+el.priceValue;
  }, 0)
  localStorage.setItem("total",Total);
  
@@ -305,7 +307,7 @@ function myfunction(){
 productbag.map(function(el,i){
         var box=document.createElement("div")
         var img=document.createElement("img")
-        img.src=el.image_url
+        img.src=el.imgUrl
         var box2=document.createElement("div")
        
        
@@ -325,18 +327,20 @@ productbag.map(function(el,i){
         
         var price=document.createElement("p")
         box4.setAttribute("id","innerbox")
-        price.innerText="$"+el.price +".00"+" "+"|"
+        price.innerText=el.priceTag
+
+        var priceValue=el.priceValue
+        var Perkvalue=el.Pervalue
         var stkop=document.createElement("p")
-      stkop.innerText="$" + el.strikedoffprice +".00"
-      stkop.style.color="gray"
-      var off1=document.createElement("p")
-      off1.textContent= "With"
-      off1.style.color="gray"
+      
+    //   var off1=document.createElement("p")
+    //   off1.textContent= "With"
+    //   off1.style.color="gray"
       var off2=document.createElement("p")
       off2.innerText="PC PERKS"
       off2.style.color="blue"
       
-        box4.append(price,stkop,off1,off2)
+        box4.append(price,off2)
         box2.append(box3,box4)
       box.append(img,box2)
 
@@ -348,12 +352,12 @@ productbag.map(function(el,i){
     function removedata(el,i){
         
        productbag.splice(i,1)
-       localStorage.setItem("productbag",JSON.stringify(productbag))
+       localStorage.setItem("Cartvalue",JSON.stringify(productbag))
        window.location.reload();
     }
     document.querySelector("#mainbtn").addEventListener("click",backpage)
     function backpage(){
-       window.location.href="fineline.html"
+       window.location.href="../prattttttttt/allproducts.html"
     }
     document.querySelector("#mainbtn2").addEventListener("click",backpages)
     function backpages(){

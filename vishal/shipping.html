@@ -338,7 +338,7 @@ textcontact.innerText=EMAILCONTACT
 
 
   document.querySelector("#lastbtn").addEventListener("click",btnfunction)
-var contactdetail=[];
+var contactdetail=JSON.parse(localStorage.getItem("contactdetail"))||[];
 function btnfunction(){
    var name=document.querySelector("#name").value
    var lastname=document.querySelector("#lastname").value
@@ -374,11 +374,11 @@ var estimate=localStorage.getItem("total")
           Total.innerText= "$"+estimate+".00"
 
     
-    var productbag=JSON.parse(localStorage.getItem("productbag"))
+    var productbag=JSON.parse(localStorage.getItem("Cartvalue"))||[]
     productbag.map(function(el,i){
         var box=document.createElement("div")
         var img=document.createElement("img")
-        img.src=el.image_url
+        img.src=el.imgUrl
         var box2=document.createElement("div")
         box2.setAttribute("class","innerbox")
         
@@ -390,7 +390,7 @@ var estimate=localStorage.getItem("total")
        box3.append(name,para)
         var box4=document.createElement("div")
        var price=document.createElement("p")
-         price.innerText="$"+el.price +".00"
+         price.innerText="$"+el.priceValue +".00"
          box4.append(price)
        box2.append(box3,box4)
       box.append(img,box2)
