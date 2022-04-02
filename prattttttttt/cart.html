@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        height: 52px;
+        font-size: 17px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      .bag {
+        display: flex;
+        margin: auto;
+      }
+      i {
+        margin-top: 2rem;
+        margin-left: 23px;
+        font-size: 35px;
+      }
+      .bag > div {
+        border-radius: 50%;
+        position: relative;
+        margin-top: 45px;
+        border: 2px solid black;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bag">
+      <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+
+      <div class="counter"></div>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var Data = JSON.parse(localStorage.getItem("Cartvalue"))||[];
+
+  // if(localStorage.getItem("counterNumber")==null){
+  //   counter=0
+  // }
+  // else{
+  //   counter=localStorage.getItem("counterNumber")
+  // }
+
+  var length = Data.length;
+
+  console.log(Data);
+  if(length==0){
+    document.querySelector(".counter").innerText="0"
+  }
+  else{
+  document.querySelector(".counter").innerText = Data.length;
+  }
+
+  window.addEventListener("load", function () {
+    displayData(Data);
+  });
+  
+  function displayData(Data) {
+    Data.map(function (el, i, arr) {
+      var box = document.createElement("div");
+
+      var imag = document.createElement("img");
+      imag.src = el.imgUrl;
+      var nam = document.createElement("h2");
+      nam.innerText = el.name;
+      var box1 = document.createElement("div");
+      box1.setAttribute("class", "boxka");
+      var priceTag = document.createElement("p");
+      // priceTag.setAttribute(".para","p")
+      priceTag.innerText = el.priceTag;
+      var PerPerks = document.createElement("p");
+      PerPerks.innerText = "PC PERKS";
+      box1.append(priceTag, PerPerks);
+      var priceValue = el.priceValue;
+      var Perkvalue = el.Perkvalue;
+      var btn = document.createElement("button");
+      btn.setAttribute("class", "buttonwalla");
+      btn.innerText = "REMOVE";
+
+      btn.addEventListener("click", function () {
+        displayCart(el,i);
+      });
+
+      box.append(imag, nam, box1, btn);
+      document.querySelector("#container").append(box);
+    });
+  }
+  function displayCart(el,i) {
+    Data.splice(i,1);
+
+    
+    window.location.reload()
+    localStorage.setItem("Cartvalue",JSON.stringify(Data))
+    
+   
+  }
+</script>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      @media all and (min-width:400px) and (max-width:800px) {
+          #container{
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+         gap: 20px;
+          }
+          .classw{
+              font-size: 15px;
+              display:block;
+              width: 100%;
+              text-align: center;
+              margin: auto;
+          }
+          .classw p{
+              text-align: center;
+              font-weight: bold;
+          }
+          .class{
+              box-sizing: border-box;
+              text-align: center;
+              padding-left: 94px;
+          }
+          
+      }
+      @media all and (min-width:270px) and (max-width:400px) {
+          #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 90%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -13px;
+              font-weight: bold;
+          }
+          h2{
+              margin-left:-10px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+         
+          
+      }
+      @media all and (min-width:0px) and (max-width:270px)
+       {
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 100%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -19px;
+              font-weight: bold;
+          }
+          .classw p{
+              /* margin: -14px; */
+              margin-left: 70px;
+
+          }
+          h1{
+              font-size: 20px;
+              margin-left: 89px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FACE SERUMS</h1>
+    <div class="classw">
+      <p>
+        Our face serums deliver powerful ingredients that target specific skin concerns, such as hydration or the appearance of wrinkles.
+      </p>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var originaldata =[
+    { Perkvalue: 157 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/TRFS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyODM2M3xpbWFnZS9wbmd8aW1hZ2VzL2g5Yy9oNzcvMTM3NTgzODUzODk1OTgucG5nfGYyZGUwNzdmOWM3N2Q2M2FlMjM4Zjc4MjQxNWZkNmIzOTc0NjIyZWM3MDgyZTY3YzA5YjMyZjNhZWY3MGE3YzY" ,
+name: "Total RF Serum" ,
+priceTag: "$175.00 |  $157.00 with" ,
+priceValue : 175 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 133 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENFMR30-Global-720x600-Desktop.jpg?context=bWFzdGVyfGltYWdlc3wzNjExN3xpbWFnZS9qcGVnfGltYWdlcy9oZjkvaDJiLzEzNjkzOTY2NDUwNzE4LmpwZ3wxODM3NzM2MTE0ZmMxM2VmMTVlYTA3ZTM5MWU3NzdmMTIzNmFkYzgzM2Y1YmIwMzk4OWFlNjQ1MzlkOGI5N2I2" ,
+name: "Total RF Serum Refill" ,
+priceTag: "$148.00 |  $133.00 with" ,
+priceValue : 148 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 204 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPS01-Regimen-Explainer-AMP-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODcyNnxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oNDEvMTQ2MDQwOTQ0MDY2ODYucG5nfGYyNGNkZTQ1ODc2Zjg3OGYzMjZjNDFmMTI4NTdmNzNkOWM0MmIzZTZhMzRkMDE0OTMwNjRkOTZiMDdiZTYyMjk" ,
+name: "REDEFINE AMP MD System" ,
+priceTag: "$227.00 |  $204.00 with" ,
+priceValue : 227 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/IRS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3w0NzYwNXxpbWFnZS9wbmd8aW1hZ2VzL2gzMy9oMmIvMTM3NTgzODU3MTcyNzgucG5nfDU3MDNlODNlMjk0MDZiYWEwODU1NTZhMDg3NDBkNTU4M2EwNGJiY2M1OTZmN2RlMWNlM2UwYmEyZDg5YzViNDM" ,
+name: "REDEFINE Intensive Renewing Serum" ,
+priceTag: "$102.00 |  $91.00 with" ,
+priceValue : 102 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 108 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPR01-cat.jpg?context=bWFzdGVyfGltYWdlc3w2MTA3NHxpbWFnZS9qcGVnfGltYWdlcy9oYTYvaDc3Lzg4MjE4NDE3MjM0MjIuanBnfGM3MTc2MmQzNTg4MWJkZTRhNjkyZjBhYmE2MDkxMjAzYzZiMWQwNGI2NGEzZDUyOTdjMDk3M2ZlNWU5M2JmNTc" ,
+name: "REDEFINE AMP MD System Refill" ,
+priceTag: "$120.00 |  $108.00 with" ,
+priceValue : 120 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 322 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRTRF-AAWA125-AATN125-AATL030-AAPL030-ENFM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w4NDEwM3xpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGRkLzEzOTc3NjUzNTQyOTQyLmpwZ3xhN2M4ZTcyYjQxNzhjMjcyNDZiNzk5OTEzOWZhZDA2NzIyNzkyODhiYzY0NjY2ZTk1ZGY4OWQ0NTJjNjc3Njk0" ,
+name: "REDEFINE + Total RF Serum Special" ,
+priceTag: "$358.00 |  $322.00 with" ,
+priceValue : 358 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 300 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRVRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NDMwOHxpbWFnZS9qcGVnfGltYWdlcy9oYzIvaGMzLzEzOTc3NjU2NTI0ODMwLmpwZ3wzZDI3Mzk1ZTZhMjVjMTMwMWZhMTYzNTNmZjVlYTAxM2YwMzYwYTg5OWU1NTNlYjY3MTYwNDQzNGY3ZTA4ZGY3" ,
+name: "REVERSE + Total RF Serum Special" ,
+priceTag: "$334.00 |  $300.00 with" ,
+priceValue : 334 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 295 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HUNRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NTM5MnxpbWFnZS9qcGVnfGltYWdlcy9oY2YvaDhjLzEzOTc3NjU3OTY2NjIyLmpwZ3xkYzVkYmZhM2IyYmU1ZmFiZWI5NTMxYjQxYzhkZDNlNDMxMDYzNmFiZDg5NzUzNTc5NDI4NDllYWY0YzEzNmIz" ,
+name: "UNBLEMISH + Total RF Serum Special" ,
+priceTag: "$328.00 |  $295.00 with" ,
+priceValue : 328 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 290 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HSORGTRF-SOWA125-SOTT050-SOMO050-SOSS050-ENFM030-900x900-tablet-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTAzNjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGY3L2g5MS8xMzk3NzY1Nzc3MDAxNC5qcGd8ZDhkOGZhNDhhNjAwMTdjN2YxNmRhMjlkYjkzZmVjYzgyMTcwY2VhMmNlMjhlZDQ5NGJhMzExNWQxNjljYjM0Mg" ,
+name: "SOOTHE + Total RF Serum Special" ,
+priceTag: "$323.00 |  $290.00 with" ,
+priceValue : 323 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 244 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRCRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w3ODAwMXxpbWFnZS9qcGVnfGltYWdlcy9oNmYvaGE3LzEzOTc3NjU1NTc0NTU4LmpwZ3w3MjA1Y2RhNjE1N2VhNWFkN2U3ZDUyNmVkY2NkZWI5MWNhNzQ0N2QxN2U4ZjE1ODYxZDIxMmI1MzA1Y2UyZmEy" ,
+name: "RECHARGE + Total RF Serum Special" ,
+priceTag: "$272.00 |  $244.00 with" ,
+priceValue : 272 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 359 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-AAAPS01-1168x1168-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxMDg1Nzd8aW1hZ2UvanBlZ3xpbWFnZXMvaDMyL2g0OC8xMjM5NjczMTQzMjk5MC5qcGd8YjM5NjlhNjM0MjM3ZDA0M2UwMGVmOTk5YmI0OWFhMjIyODlhN2YxOTFiYjAxYWFlOGQ5NjYyN2NkYjllYTQ3Mg" ,
+name: "REDEFINE AMP It Up Special" ,
+priceTag: "$400.00 |  $359.00 with" ,
+priceValue : 400 , 
+caregory : "Faceserums" , } ,
+]
+
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+
+  
+  
+  
+ 
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#container").append(box);
+  });
+
+ 
+  function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+  // document.querySelector("#container").innerHTML=""
+</script>

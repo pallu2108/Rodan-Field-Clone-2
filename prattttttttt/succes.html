@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        overflow: hidden;
+        background-color: white;
+        /* animation: background 10s; */
+      }
+      /* @keyframes background {
+          0%{
+              background-image: none;
+          }
+          100%{
+            background-image: linear-gradient(to left, #a5d814, #00d278, #00c1c3, #00a7eb, #0084de, #0083dd, #0082dd, #0081dc, #00a3ee, #00c2f6, #00dff5, #5ffbf1);
+          }
+          
+      } */
+      i{
+        position: absolute;
+        opacity: 1;
+        left: -400px;
+        animation: gari 6s 0.1s ease-in-out;
+      }
+      @keyframes gari {
+        0%{
+          opacity: 1;
+          left: 200px;
+        }
+        /* 50%{
+          opacity: 1;
+          right: 100%;
+        } */
+        100%{
+          opacity: 1;
+          left: 100%;
+        }
+        
+      }
+      .rocket{
+        /* background-color: black; */
+       
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        bottom: -300px;
+        left: 38%;
+        animation: fly 1.5s 0.5s ease-in;
+        
+      }
+      @keyframes fly {
+        0% {
+          bottom: -120px;
+        }
+        
+        100% {
+          bottom: 100%;
+        }
+      }
+      h1{
+          margin-top: 5rem;
+          position: static;
+          text-align: center;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          animation: appear 20s;
+         
+      }
+      @keyframes appear {
+
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            
+        }
+        50%{
+          font-size: 44px;
+        }
+          
+      }
+      .symbol{
+          margin-top: 5rem;
+         display: block;
+         margin: auto;
+         
+        
+        animation: opacity 20s ;
+         
+      }
+      @keyframes opacity {
+          0%{opacity: 
+            0;
+          }
+           
+          100%{
+              opacity: 1;
+          }
+
+          
+      }
+      
+
+    </style>
+  </head>
+  <body>
+     
+      <h1>Your Product is on the way <span><i class="fa-solid fa-truck"></i></span></h1>
+    <img class="rocket"
+      src="https://media.istockphoto.com/vectors/rocket-launch-vector-illustration-isolated-on-white-vector-id876037616?k=20&m=876037616&s=612x612&w=0&h=e7ux_ivQQ_b4hhoxGOklgjxx4wl-TMWEUM1Ts-meuDo="
+      alt=""
+    />
+    <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=360/uploads/users/523/posts/32694/final_image/tutorial-preview-large.png" alt="" class="symbol">
+  </body>
+</html>
+
