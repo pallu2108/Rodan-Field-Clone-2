@@ -16,45 +16,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-<script
-    src="https://kit.fontawesome.com/24c494a6b6.js"
-    crossorigin="anonymous"
-    ></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://mdbootstrap.com/docs/standard/content-styles/flags/">
-    <script
-    src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://mdbootstrap.com/docs/standard/content-styles/flags/">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         #mainContainer{
             height: auto;
             width: 100%;
         }
-      #offer{
+        #offer{
         width: 100%;
         height: 80px;
-        background-color: #F5F3F1;
-        border-color: #797A7C;
+        background-color: #f5f3f1; 
+        border-color: #797a7c;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+       
+        
     }
     #learnmore{
         text-decoration:none ;
-        /* font-size: 25px; */
         margin-left: 10px;
         font-weight: 500px;
-        /* border-color: inherit !important; */
         padding: 0.3rem 0;
         border-bottom: 0.1rem solid;
         margin-left: 0.5rem;
         font-family: GothamBold,Arial Sans-Serif;
         font-weight: 1000;
-        color: #55565A;
+        color: #55565a;
+        
     }
+   
     #navbar{
+       
         width: 100%;
         height: 40px;
         margin-top: 30px;
@@ -62,13 +59,18 @@
         align-items: center;
         margin-left:8px;
         justify-content: space-between;
+        
+
+
     }
     #find{
         color: #55565A;
         font-size: 18px;
     }
+    
+   
     #rightsidebar{
-        width: 350px;
+        width: 440px;
         height: 10px;
         margin-right: 27px;
         display: flex;
@@ -78,11 +80,12 @@
         justify-content: space-around;
     }
     #signin{
-        width: 80px;
+        width: 100px;
         height: 50px;
         justify-content: space-around;
         display: flex;
         color: #55565A;
+        
         align-items: center;
         text-decoration: none;
     }
@@ -92,11 +95,12 @@
         margin-top: 25PX;
         justify-content: space-evenly;
         color: #55565A;
-        border-top:1px solid #5A5A5A;
+        border-top:1px solid #5a5a5a;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+       
     }
     #nav2{
         width: 70%;
@@ -108,23 +112,48 @@
         align-items: center;
         font-size: 18px;
         font-family: HCoGothamSSmSemiBold, Arial, sans-serif;;
+        
+
     }
     a{
         text-decoration: none;
-        color: #272829;
+        color: #414344;
     }
+    #nav2>a>p{
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+           
+        }
+        a>p::before{
+            content: "";
+            position: absolute;
+            left:0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: teal;
+            transition: width 0.24s ease-out;
+        }
+        #nav2>a>p:hover::before{
+            width: 100%;
+        }
+    
     #logo1{
         margin-left: 104px;
+        width: 180px;
+        
     }
+   
 
 
 
-        #container1{
-            width: 392px;
-    /* border: 1px solid black; */
-    height: 516px;
-    margin-left: 45px;
-        }
+    #container1{
+        width: 392px;
+        /* border: 1px solid black; */
+        height: 516px;
+        margin-left: 45px;
+    }
         #top{
             /* border: 1px solid black; */
             width:98%;
@@ -446,58 +475,59 @@
 </head>
 <body> 
     <div id="mainContainer">
-    <div>
-        <div id="offer">
-            <p>
-                Take 15% off (up to $20 savings) the first time you pay with Klarna. <a id="learnmore" href="/promotional-terms-and-conditions">Learn More</a>
-            </p>
-        </div>
-        <div id="box">
-            <div id="navbar">
-                <div id="find">
-                    FIND A CONSULTANT
+        <div>
+            <div id="offer">
+                <p>
+                    Take 15% off (up to $20 savings) the first time you pay with Klarna. <a id="learnmore" href="/promotional-terms-and-conditions">Learn More</a>
+                </p>
+    </div>
+    <div id="box">
+        <div id="navbar">
+            <div id="find">
+                FIND A CONSULTANT
+            </div>
+            <div id="logo">
+                <a href="index.html"><img id="logo1" src="https://www.rodanandfields.com/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA"></a>
+            </div>
+            <div id="rightsidebar">
+                <div id="search">
+                    <p >
+                        Search
+                        <span><i class="fa fa-magnifying-glass"></i></span>
+                    </p>
                 </div>
-                <div id="logo">
-                    <a href="index.html"><img id="logo1" src="https://www.rodanandfields.com/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA"></a>
-                </div>
-                <div id="rightsidebar">
-                    <div id="search">
-                        <p >
-                               Search
-                            <span><i class="fa fa-magnifying-glass"></i></span>
-                        </p>
-                    </div>
-                <div  id="signin">
-                    <a href="signin.html">
-                        <p>Sign in</p>
-                    </a>
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <a href="countries.html">
-                        <p><span class="flag-icon flag-icon-us"></span>
-                            English
-                        </p>
-                    </a>
-                </div>
-        </div>
+            <div  id="signin">
+                <a href="signup.html"><p>Sign up</p> </a>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                
+            </div>
+            <div id="signin">
+                <a href="signin.html"><p>Sign in</p></a>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                
+            </div>
+            <div>
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </div>
+            <div>
+                <a href="countries.html">
+                    <p><span class="flag-icon flag-icon-us"></span>English</p>
+                </a>
+            </div>
+    </div>
     </div>
     <div id="navbar2">
         <div id="nav2">
-            <a href="">
-                <p >SHOP</p>
-            </a>
-           <a href=""> <p>BEST SELLERS</p></a>
-           <a href=""> <p>FEATURED</p></a>
-           <a href=""><p>OUR STORY</p></a>
-           <a href=""> <p>PERKS PROGRAM</p></a>
-           <a href=""> <p>BECOME A CONSULTANT</p></a>
-           <a href=""> <p>BLOG</p></a>
+            <a href=""><p>SHOP</p></a>
+            <a href=""><p>BEST SELLERS</p></a>
+            <a href=""> <p>FEATURED</p></a>
+            <a href=""><p>OUR STORY</p></a>
+            <a href=""> <p>PERKS PROGRAM</p></a>
+            <a href=""> <p>BECOME A CONSULTANT</p></a>
+            <a href=""> <p>BLOG</p></a>
         </div>
     </div>
+
 
    <div id="top">
     <img id="topfirst" src="https://www.rodanandfields.com/en-us/medias/22-HP-PC-Perks-Desktop.gif?context=bWFzdGVyfHJvb3R8NTkxMzczfGltYWdlL2dpZnxoZDIvaGYwLzE0ODU2NzM0MjEyMTI2LmdpZnw5MjEwMzI1YjAyODNiYzgwMDdhMTI5OGQ0YjA1MjlhZTg2ZjE0ODJlNDZjNTUwZDg2YTQ2MzFkMmMxMTRkZjAx" alt="alternative text" style="position: relative;" /><span style="position: absolute; top: 50px; left: 50px;">
@@ -793,6 +823,5 @@
         </div>
 </html>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
-    
     
 </script>
