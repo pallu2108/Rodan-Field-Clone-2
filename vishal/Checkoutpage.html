@@ -288,7 +288,7 @@ color: white;
 
 function myfunction(){
     var input=document.querySelector("#promo").value
-    var  uptotal;
+    var  uptotal=localStorage.getItem("total")
    if(input=="MASAI" && input!="")
    {
     var etotal=document.querySelector(".Total")
