@@ -23,6 +23,9 @@
           /* height: auto; */
           margin-top: 5rem;
           width: 30%;
+          
+          
+
 
       }
       select{
@@ -55,7 +58,7 @@
         width: 80%;
         margin: auto;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows:auto;
         grid-gap: 10px 20px;
         margin-top: 2rem;
       
@@ -65,6 +68,7 @@
       img {
         height: 50%;
         width: 100%;
+        object-fit: cover;
       }
       h2 {
         text-align: center;
@@ -89,10 +93,16 @@
         font-size: 13px;
         margin-top: 13px;
         padding: 15px 106px 15px 106px;
-        border-radius: 12px;
+        border-radius: 10px;
+      }
+      .buttonwalla:hover{
+        background-color: #abe9cd;
+background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
       }
       #conta > div {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-top: 2rem;
         /* overflow: scroll; */
       }
       #bapp{
@@ -115,10 +125,40 @@
       }
       select{
         font-size: 20px;
+        background-color: #f1dfd1;
+background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+ margin-right: 5px;
+ margin-top: -7px;
       }
       option{
-        font-size: 14px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #9dc5c3;
+background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
+/* color: white; */
+
       }
+      @media all and (min-width:300px) and (max-width:930px) {
+        #conta{
+          grid-template-columns: repeat(2,1fr);
+          width: max-content;
+        }
+        .container{
+          width: max-content;
+        }
+        
+      }
+      @media all and (min-width:0px) and (max-width:300px) {
+        #conta{
+          grid-template-columns: repeat(1,1fr);
+          width: max-content;
+        }
+        .container{
+          width: max-content;
+        }
+        
+      }
+     
 
     </style>
 </head>
@@ -127,45 +167,55 @@
       
     <div class="container">
       <h1>Filter By</h1>
-      <select name="" id="category">
+      <select name="" id="category" onchange="handlesort()">
            <option value="">Category</option>
            <option value="Regimens">Regimens (15)</option>
            <option value="Faceserums">Face Serums</option>
-           <option value="">Eyes</option>
+           <option value="Fine lines  and deep wrinkles">Eyes</option>
            <option value="Facemask">Face Mask</option>
            <option value="Hand & Body" >Hand & Body</option>
-           <option value="">Sun Protection</option>
-           <option value="">Pro Skin Tools</option>
+           <option value="Fine lines  and deep wrinkles">Sun Protection</option>
+           <option value="Facemask">Pro Skin Tools</option>
            <option value="Regimens">Accesories</option>
            <option value="Dermacosmetics">Special Offers</option>
       </select>
-      <select name="" id="skinconcern">
-        <option value="">Skin Concern</option>
-        <option value="">Lifting and Firming</option>
-        <option value="">Dull & Tired Skin</option>
-        <option value="">Acne & Breakouts</option>
-        <option value="">Uneven Tone & Dark Marks</option>
-        <option value="">Sensitivity & Visible Redness</option>
-        <option value="">Pores & Blackheads</option>
-        <option value="">Dry Skin</option>
+      <select name="" id="skinconcern" onchange="handlesorty()">
+        <option value="Faceserums">Skin Concern</option>
+        <option value="Facemask">Lifting and Firming</option>
+        <option value="Dull and Tired skin">Dull & Tired Skin</option>
+        <option value="Facemask">Acne & Breakouts</option>
+        <option value="redefine">Uneven Tone & Dark Marks</option>
+        <option value="Regimens">Sensitivity & Visible Redness</option>
+        <option value="Faceserums">Pores & Blackheads</option>
+        <option value="Dry Skin">Dry Skin</option>
        
 
 
       </select>
-      <select name="" id="applicationarea">
-        <option value="">application Area</option>
-        <option value="">Face</option>
-        <option value="">Eyes</option>
-        <option value="">EyeLashes</option>
-        <option value="">Body</option>
-        <option value="">application Area</option>
-        <option value="">application Area</option>
-        <option value="">application Area</option>
-        <option value="">application Area</option>
+      <select name="" id="applicationarea" onchange="handlesorti()" >
+        <option value="">Application Area</option>
+        <option value="Dull and Tired skin">Face</option>
+        <option value="Fine lines  and deep wrinkles">Eyes</option>
+        <option value="Regimens">EyeLashes</option>
+        <option value="Dry Skin">Body</option>
+        <option value="Hand & Body">Hands</option>
+        <option value="Fine lines  and deep wrinkles">Lips</option>
+       
+        
 
 
       </select>
-      <select name="" id="productline">
+      <select name="" id="productline" onchange="handlesor()">
+        <option value="">Product Line</option>
+        <option value="redefine">Redefine</option>
+        <option value="Dull and Tired skin">Reverse</option>
+        <option value="Fine lines  and deep wrinkles">Unblemish</option>
+        <option value="Soothe">Soothe (8)</option>
+        <option value="Spotless">Spotless (4)</option>
+        <option value="Dull and Tired skin">Recharge (8)</option>
+        <option value="Dry Skin">Enhancements (18)</option>
+        <option value="Dermacosmetics">Dermacosmetics (2)</option>
+        <option value="Dry Skin">Essentials (8)</option>
 
 
       </select>
@@ -177,109 +227,643 @@
 </html>
 <script>
     var originaldata = [
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"regimens"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"Atta"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"papu"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"Atta"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"Atta"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-      product:"regimens"
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-     
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-    },
-    {
-      imgUrl:
-        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
-      name: "Redefine Regimen",
-      priceTag: "$220.00 |  $197.00 with",
-      priceValue: 220.0,
-      Perkvalue: 197,
-    },
+    { Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/DERDS-detail-1-.jpg?context=bWFzdGVyfGltYWdlc3wyOTY1MnxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaGFjLzEzNTMzMTM3Njk4ODQ2LmpwZ3xjOWYzNDA1ZjRiODE0ZTJiMDNiZGIxOTVhZTQ1ZWUwYTI4MDAxYTE4ODRhZDZhYjNlOTE4YTE0ZTcwZDM5NDg5" ,
+name: "Radiant Defense Perfecting Liquid SPF 30" ,
+priceTag: "$66.00 |  $59.00  with" ,
+priceValue : 66 , 
+caregory :  "Dermacosmetics" , } ,
+
+{ Perkvalue: 34 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/DERDLB1-cat.jpg?context=bWFzdGVyfGltYWdlc3wxMDkyNHxpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDE4Lzg4MjE4NDQxNDgyNTQuanBnfDVmY2E4ZmM1YzdlNjQxMmI4YjgzNGY4MDIwNWVlZDc2MmNhYzVjN2FjZmQyMTFiNmU1NDc4Y2RiNGQyOWFmZjk" ,
+name: "Radiant Defense Liquid Brush" ,
+priceTag: "$38.00 |  $34.00  with" ,
+priceValue : 38 , 
+caregory :  "Dermacosmetics" , } ,
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 ,
+caregory : "Dry Skin"  } ,
+
+
+{ Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5" ,
+name: "Rodan + Fields Active Hydration Body Replenish" ,
+priceTag: "$66.00 |  $59.00 with" ,
+priceValue : 66 , 
+caregory : "Dry Skin"   , } ,
+
+{ Perkvalue: 74 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENPS125-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODU1NXxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZjgvMTQ1MzIxNjc2MzA4NzgucG5nfGM0YTc0NjM0YWIzM2QxZDZlOTc0NTdmYjA4M2EyNDA5NGJhODg3ZDQwMGJjZjdiMTZlYTI2MjYwNjI2Y2JhZGE" ,
+name: "Rodan + Fields Enhancements Micro-Dermabrasion Paste" ,
+priceTag: "$83.00 |  $74.00 with" ,
+priceValue : 83,
+caregory : "Dry Skin"  , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Dry Skin"  } ,
+
+{ Perkvalue: 24 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESBL200-cat.jpg?context=bWFzdGVyfGltYWdlc3wyMjg3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTYvaDJhLzg4MjE4NDQ4NjkxNTAuanBnfGQ2M2NlOTA4ZWU1ODZjZjkyNDQwZTNhN2VhM2FjM2E1MmZjMjI3YWEyMjkzYmRmZDQ5ZGM2OGJlMWI4MjJjYTA" ,
+name: "ESSENTIALS Daily Body Moisturizer" ,
+priceTag: "$27.00 |  $24.00 with" ,
+priceValue : 27 ,
+caregory : "Dry Skin"   } ,
+
+
+{ Perkvalue: 30 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESFB150-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxODk0N3xpbWFnZS9qcGVnfGltYWdlcy9oZGYvaDRkLzEwMjkxODI5Mzc1MDA2LmpwZ3xhYWFjOGQwMDNmZjYyNTliYWQwYjFhZDI5MmMzMTBiZDg1Y2U1NDBiZjg0ZDk3M2U1ZTVjNzU4ZTI0YzlkNWU1" ,
+name: "ESSENTIALS Face + Body Sunscreen Broad Spectrum SPF 50" ,
+priceTag: "$34.00 |  $30.00 with" ,
+priceValue : 34 ,
+caregory : "Dry Skin"   } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESLS002-cat.jpg?context=bWFzdGVyfGltYWdlc3wzNjk5NHxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDRlLzg4MjE4NDQ5Njc0NTQuanBnfGQ5M2Q2OWZjNDEzM2Q4MTMwYTc5N2M3MThhYzdiODVjYTMzZjY2N2Y3MWVjYTNlZWNmNmRlMmEzMGNmNDlhY2Q" ,
+name: "ESSENTIALS Lip Shield SPF 25 (Two-Pack)" ,
+priceTag: "$19.00 |  $17.00 with" ,
+priceValue : 102 , 
+caregory : "Dry Skin"  } ,
+{ Perkvalue: 120 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCWA125-RCTTO50-RCSP040-REGHARGE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NHxpbWFnZS9wbmd8aW1hZ2VzL2hkNi9oNDMvMTM3NTgzODQ2MDMxNjYucG5nfGQ4MzYxODU0ZDcxOTZiOTdlODg3NmZmZTAzZGQ1MGQ5Yjg0YzBhODk3NzJhYzM5NzZlNjQ1NjQzNGQ3NTY0ZmE" ,
+name: "RECHARGE Regimen" ,
+priceTag: "$134.00 |  $120.00 with" ,
+priceValue : 134 , 
+caregory : "Dull and Tired skin"  , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCDMF50-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxNDYyN3xpbWFnZS9qcGVnfGltYWdlcy9oMjYvaDYzLzEzNjE1ODcyMjEzMDIyLmpwZ3xmYWJlZGQ0ZDc0ZmUwYzUwNWM3ODMyZGUyZDlkZjA1NjBmZDMxZmU0ZDlmZjdkNDQwZDhkNWVmOGQ4YjlmYTQ3" ,
+name: "RECHARGE Detox Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 ,
+caregory : "Dull and Tired skin" , } ,
+
+{ Perkvalue: 36 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCWA125-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wxMjA3MnxpbWFnZS9qcGVnfGltYWdlcy9oNWMvaGY0LzkxNzEyNDM0MDEyNDYuanBnfDJhMjdiNWE2NjQ0ODZjMGMwMDJkZWJlNDVhMGRhMmM5ODE2OTY0Mzg1NTc1NDRjOTczZTZjZGE0NzNmOWYzOTQ" ,
+name: "RECHARGE 3-in-1 Super Cleanser" ,
+priceTag: "$40.00 |  $36.00 with" ,
+priceValue : 40 ,
+caregory : "Dull and Tired skin"  } ,
+
+{ Perkvalue: 72 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCTT050-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wxMTk0NXxpbWFnZS9qcGVnfGltYWdlcy9oY2EvaDdjLzkxNzEyNDI2ODAzNTAuanBnfGU3NzViZGQ3Y2FhZmM2MjdmZTQ1YWQ0OGMxYTFhZmFkNDkwYTRjOWNlYWI3OWY5ZmRlYWNlOTRmODFjZWNhOTU" ,
+name: "RECHARGE Ultra Boost Moisturizing Treatment" ,
+priceTag: "$80.00 |  $72.00  with" ,
+priceValue : 80 , 
+caregory : "Dull and Tired skin" } ,
+
+{ Perkvalue: 43 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCSP040-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wxMjgxOXxpbWFnZS9qcGVnfGltYWdlcy9oNjEvaDIyLzkxNzEyNDIwMjQ5OTAuanBnfDIyNmU3MTAxZjRiOWY5YjFiZjEzNGZkNDhlOGQ0M2EyYzFhOGFmYzI2ODAzNjc5NjY5NzI4OWVjZmQyNjljOWU" ,
+name: "RECHARGE Protect + Blur Broad Spectrum SPF 30 Sunscreen" ,
+priceTag: "$48.00 |  $43.00 with" ,
+priceValue : 48 ,
+caregory : "Dull and Tired skin"  } ,
+
+{ Perkvalue: 244 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRCRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w3ODAwMXxpbWFnZS9qcGVnfGltYWdlcy9oNmYvaGE3LzEzOTc3NjU1NTc0NTU4LmpwZ3w3MjA1Y2RhNjE1N2VhNWFkN2U3ZDUyNmVkY2NkZWI5MWNhNzQ0N2QxN2U4ZjE1ODYxZDIxMmI1MzA1Y2UyZmEy" ,
+name: "RECHARGE + Total RF Serum Special" ,
+priceTag: "$272.00 |  $244.00 with" ,
+priceValue : 272 , 
+caregory : "Dull and Tired skin" } ,
+
+{ Perkvalue:230 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCLBES1-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wxOTIwM3xpbWFnZS9qcGVnfGltYWdlcy9oYWYvaDY2LzkxNzEyMzg3NDgxOTAuanBnfDIzM2NlODM0ODNjNTgxYThiMDAyMGJlYWEwMzRiZmU4ZDJiNThkODM3OTFmMmJhZjNmMzFmNDE3ODk5OWVhMzg" ,
+name: "RECHARGE + Lash Boost Special" ,
+priceTag: "$256.00 |  $230.00 with" ,
+priceValue : 256 ,
+caregory : "Dull and Tired skin"  } ,
+
+{ Perkvalue: 307 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCXPSEG-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wxNzc1M3xpbWFnZS9qcGVnfGltYWdlcy9oMDUvaGIyLzkxNzEyNDQwODkzNzQuanBnfGU4YTdjMzZjMWY0MGE5MGJlODI5YTI5ZmM1YmI2MDE0MGU1YjI5YjIzZDE3Zjg4MTMzM2VmZGMyOTI3ZTJmNTQ" ,
+name: "RECHARGE Power Up Special" ,
+priceTag: "$342.00 |  $307.00 with" ,
+priceValue : 342 , 
+caregory : "Dull and Tired skin" } ,
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 , 
+caregory : "Facemask" , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RVRMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTQ4NzJ8aW1hZ2UvanBlZ3xoYTkvaDRiLzEzNjE2MDEzMjQ2NDk0LmpwZ3w0NGQyYWM2NjM3OGIwNDdmZWYzOGJlZjBjNGMyMjk1MmNhNDY3N2Q1ZDhlZTE5NDlhNDA1ZmM3YTFiNzc5MDli" ,
+name: "REVERSE Radiance Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Facemask" , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/UNRMF50-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w0MTg2NnxpbWFnZS9qcGVnfGltYWdlcy9oN2MvaDk2LzEzNjE1ODgxMzg4MDYyLmpwZ3w0ZGE1ZWNiZWI1OTdiYmFkMjY3ZWU3ZWVmMDBkZjdlOWYzMDY4MGUwYWE4NTZiZTZjN2M3YjUxN2M2NmYxYjhk" ,
+name: "UNBLEMISH Clarifying Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Facemask" , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SORMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTg4MzN8aW1hZ2UvanBlZ3xoOTEvaDUzLzEzNjE1ODc4Mjc1MTAyLmpwZ3wwY2QzZDVmYTIzNDhlYjY1YjMzYWRjN2RkMzJmNzVlNGQxZWM1MTBhZjA1YjgwMzhkMWI4ZTNhMjM5ODRhMmJi" ,
+name: "SOOTHE Rescue Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 , 
+caregory : "Facemask" , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCDMF50-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxNDYyN3xpbWFnZS9qcGVnfGltYWdlcy9oMjYvaDYzLzEzNjE1ODcyMjEzMDIyLmpwZ3xmYWJlZGQ0ZDc0ZmUwYzUwNWM3ODMyZGUyZDlkZjA1NjBmZDMxZmU0ZDlmZjdkNDQwZDhkNWVmOGQ4YjlmYTQ3" ,
+name: "RECHARGE Detox Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 , 
+caregory : "Facemask" , } ,
+{ Perkvalue: 157 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/TRFS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyODM2M3xpbWFnZS9wbmd8aW1hZ2VzL2g5Yy9oNzcvMTM3NTgzODUzODk1OTgucG5nfGYyZGUwNzdmOWM3N2Q2M2FlMjM4Zjc4MjQxNWZkNmIzOTc0NjIyZWM3MDgyZTY3YzA5YjMyZjNhZWY3MGE3YzY" ,
+name: "Total RF Serum" ,
+priceTag: "$175.00 |  $157.00 with" ,
+priceValue : 175 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 133 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENFMR30-Global-720x600-Desktop.jpg?context=bWFzdGVyfGltYWdlc3wzNjExN3xpbWFnZS9qcGVnfGltYWdlcy9oZjkvaDJiLzEzNjkzOTY2NDUwNzE4LmpwZ3wxODM3NzM2MTE0ZmMxM2VmMTVlYTA3ZTM5MWU3NzdmMTIzNmFkYzgzM2Y1YmIwMzk4OWFlNjQ1MzlkOGI5N2I2" ,
+name: "Total RF Serum Refill" ,
+priceTag: "$148.00 |  $133.00 with" ,
+priceValue : 148 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 204 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPS01-Regimen-Explainer-AMP-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODcyNnxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oNDEvMTQ2MDQwOTQ0MDY2ODYucG5nfGYyNGNkZTQ1ODc2Zjg3OGYzMjZjNDFmMTI4NTdmNzNkOWM0MmIzZTZhMzRkMDE0OTMwNjRkOTZiMDdiZTYyMjk" ,
+name: "REDEFINE AMP MD System" ,
+priceTag: "$227.00 |  $204.00 with" ,
+priceValue : 227 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/IRS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3w0NzYwNXxpbWFnZS9wbmd8aW1hZ2VzL2gzMy9oMmIvMTM3NTgzODU3MTcyNzgucG5nfDU3MDNlODNlMjk0MDZiYWEwODU1NTZhMDg3NDBkNTU4M2EwNGJiY2M1OTZmN2RlMWNlM2UwYmEyZDg5YzViNDM" ,
+name: "REDEFINE Intensive Renewing Serum" ,
+priceTag: "$102.00 |  $91.00 with" ,
+priceValue : 102 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 108 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPR01-cat.jpg?context=bWFzdGVyfGltYWdlc3w2MTA3NHxpbWFnZS9qcGVnfGltYWdlcy9oYTYvaDc3Lzg4MjE4NDE3MjM0MjIuanBnfGM3MTc2MmQzNTg4MWJkZTRhNjkyZjBhYmE2MDkxMjAzYzZiMWQwNGI2NGEzZDUyOTdjMDk3M2ZlNWU5M2JmNTc" ,
+name: "REDEFINE AMP MD System Refill" ,
+priceTag: "$120.00 |  $108.00 with" ,
+priceValue : 120 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 322 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRTRF-AAWA125-AATN125-AATL030-AAPL030-ENFM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w4NDEwM3xpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGRkLzEzOTc3NjUzNTQyOTQyLmpwZ3xhN2M4ZTcyYjQxNzhjMjcyNDZiNzk5OTEzOWZhZDA2NzIyNzkyODhiYzY0NjY2ZTk1ZGY4OWQ0NTJjNjc3Njk0" ,
+name: "REDEFINE + Total RF Serum Special" ,
+priceTag: "$358.00 |  $322.00 with" ,
+priceValue : 358 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 300 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRVRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NDMwOHxpbWFnZS9qcGVnfGltYWdlcy9oYzIvaGMzLzEzOTc3NjU2NTI0ODMwLmpwZ3wzZDI3Mzk1ZTZhMjVjMTMwMWZhMTYzNTNmZjVlYTAxM2YwMzYwYTg5OWU1NTNlYjY3MTYwNDQzNGY3ZTA4ZGY3" ,
+name: "REVERSE + Total RF Serum Special" ,
+priceTag: "$334.00 |  $300.00 with" ,
+priceValue : 334 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 295 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HUNRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NTM5MnxpbWFnZS9qcGVnfGltYWdlcy9oY2YvaDhjLzEzOTc3NjU3OTY2NjIyLmpwZ3xkYzVkYmZhM2IyYmU1ZmFiZWI5NTMxYjQxYzhkZDNlNDMxMDYzNmFiZDg5NzUzNTc5NDI4NDllYWY0YzEzNmIz" ,
+name: "UNBLEMISH + Total RF Serum Special" ,
+priceTag: "$328.00 |  $295.00 with" ,
+priceValue : 328 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 290 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HSORGTRF-SOWA125-SOTT050-SOMO050-SOSS050-ENFM030-900x900-tablet-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTAzNjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGY3L2g5MS8xMzk3NzY1Nzc3MDAxNC5qcGd8ZDhkOGZhNDhhNjAwMTdjN2YxNmRhMjlkYjkzZmVjYzgyMTcwY2VhMmNlMjhlZDQ5NGJhMzExNWQxNjljYjM0Mg" ,
+name: "SOOTHE + Total RF Serum Special" ,
+priceTag: "$323.00 |  $290.00 with" ,
+priceValue : 323 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 244 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRCRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w3ODAwMXxpbWFnZS9qcGVnfGltYWdlcy9oNmYvaGE3LzEzOTc3NjU1NTc0NTU4LmpwZ3w3MjA1Y2RhNjE1N2VhNWFkN2U3ZDUyNmVkY2NkZWI5MWNhNzQ0N2QxN2U4ZjE1ODYxZDIxMmI1MzA1Y2UyZmEy" ,
+name: "RECHARGE + Total RF Serum Special" ,
+priceTag: "$272.00 |  $244.00 with" ,
+priceValue : 272 , 
+caregory : "Faceserums" , } ,
+
+{ Perkvalue: 359 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-AAAPS01-1168x1168-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxMDg1Nzd8aW1hZ2UvanBlZ3xpbWFnZXMvaDMyL2g0OC8xMjM5NjczMTQzMjk5MC5qcGd8YjM5NjlhNjM0MjM3ZDA0M2UwMGVmOTk5YmI0OWFhMjIyODlhN2YxOTFiYjAxYWFlOGQ5NjYyN2NkYjllYTQ3Mg" ,
+name: "REDEFINE AMP It Up Special" ,
+priceTag: "$400.00 |  $359.00 with" ,
+priceValue : 400 , 
+caregory : "Faceserums" , } ,
+{ Perkvalue: 197 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU" ,
+name: "Redefine Regimen" ,
+priceTag: "$220.00 |  $197.00 with" ,
+priceValue : 220 , 
+caregory : "Fine lines  and deep wrinkles"  , } ,
+
+{ Perkvalue: 63 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI" ,
+name: "REDEFINE Multi-Function Eye Cream" ,
+priceTag: "$70.00 |  $63.00 with" ,
+priceValue : 70 ,
+caregory : "Fine lines  and deep wrinkles" , } ,
+
+{ Perkvalue: 204 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPS01-Regimen-Explainer-AMP-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODcyNnxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oNDEvMTQ2MDQwOTQ0MDY2ODYucG5nfGYyNGNkZTQ1ODc2Zjg3OGYzMjZjNDFmMTI4NTdmNzNkOWM0MmIzZTZhMzRkMDE0OTMwNjRkOTZiMDdiZTYyMjk" ,
+name: "REDEFINE AMP MD System" ,
+priceTag: "$227.00 |  $204.00 with" ,
+priceValue : 227 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 52 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AALS060-Regimen-Explainer-Lip-Renewing-Serum-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMzc3M3xpbWFnZS9wbmd8aW1hZ2VzL2hmYi9oNDEvMTQ2MDQwOTM1ODc0ODYucG5nfGIyNTY2ZTJmMTAzMDc4MDhjZTkyYjYwZDI1MWZlNGNlZWQ2ZGIzYzc3ZjkwN2RjZDY3YmU3NDkwNDIyOWUwYWU" ,
+name: "REDEFINE Lip Renewing Serum" ,
+priceTag: "$58.00 |  $52.00 with" ,
+priceValue : 58 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/IRS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3w0NzYwNXxpbWFnZS9wbmd8aW1hZ2VzL2gzMy9oMmIvMTM3NTgzODU3MTcyNzgucG5nfDU3MDNlODNlMjk0MDZiYWEwODU1NTZhMDg3NDBkNTU4M2EwNGJiY2M1OTZmN2RlMWNlM2UwYmEyZDg5YzViNDM" ,
+name: "REDEFINE Intensive Renewing Serum" ,
+priceTag: "$102.00 |  $91.00" ,
+priceValue : 102 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 64 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEY15-720x600-DESKTOP-v4.jpg?context=bWFzdGVyfGltYWdlc3w2MDYyOXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGI2LzEzNTMzMTczODc0NzE4LmpwZ3w0MGI1MmM0OTExMmRiMzUzYzg5YTIyNWJjZTdiOTZkNzk1ZTVmOTk2MTBhY2IzZTcwNzhkZDI4NTUxZDI5Zjhh" ,
+name: "Active Hydration Bright Eye Complex" ,
+priceTag: "$72.00 |  $64.00 with" ,
+priceValue : 72 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5" ,
+name: "Rodan + Fields Active Hydration Body Replenish" ,
+priceTag: "$66.00 |  $59.00  with" ,
+priceValue : 66 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg1Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDM3L2g5ZC8xNDc5ODgzMjU2NjMwMi5qcGd8OTAzYjY3NGU1YTUyNmNkYzcyZGM3NGEyMmQzYjIxY2ZiMTRjYjNjNzhmYWFiMzdkOGI0ODM1MjdiMTI0Nzk2Zg" ,
+name: "REDEFINE Daily Clay Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWF125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg2NjZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGFjL2hiOC8xMTg1NDA1NjkxNDk3NC5qcGd8MDhiNGM0ZDJmMTliNzhmYjk0ZDJmYzQ4YjhhM2E2YjU2NGE1YzRjZTExNjJmYzU3ZjFmNTc3MmE3N2UyNTMwNw" ,
+name: "REDEFINE Daily Foaming Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 45 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AATN125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTk1ODd8aW1hZ2UvanBlZ3xpbWFnZXMvaGFkL2hmMi8xMTg1NDA1MzMxMDQ5NC5qcGd8Njg0OTgyMDU0NGI3MDhkNDY5OWZmMWI2YTYxMTg3OWZhODM5NTk3MTBjNTVlOTdiMTQ4YWE4ZmUzMWZkZDg4OA" ,
+name: "REDEFINE Pore Refining Toner" ,
+priceTag: "$50.00 |  $45.00  with" ,
+priceValue : 50 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+{ Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5" ,
+name: "Rodan + Fields Active Hydration Body Replenish" ,
+priceTag: "$66.00 |  $59.00 with" ,
+priceValue : 66 , 
+caregory : "Hand & Body" , } ,
+
+{ Perkvalue: 74 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENPS125-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODU1NXxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZjgvMTQ1MzIxNjc2MzA4NzgucG5nfGM0YTc0NjM0YWIzM2QxZDZlOTc0NTdmYjA4M2EyNDA5NGJhODg3ZDQwMGJjZjdiMTZlYTI2MjYwNjI2Y2JhZGE" ,
+name: "Rodan + Fields Enhancements Micro-Dermabrasion Paste" ,
+priceTag: "$83.00 |  $74.00  with" ,
+priceValue : 83 , 
+caregory : "Hand & Body" ,  } ,
+
+{ Perkvalue: 24 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESBL200-cat.jpg?context=bWFzdGVyfGltYWdlc3wyMjg3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTYvaDJhLzg4MjE4NDQ4NjkxNTAuanBnfGQ2M2NlOTA4ZWU1ODZjZjkyNDQwZTNhN2VhM2FjM2E1MmZjMjI3YWEyMjkzYmRmZDQ5ZGM2OGJlMWI4MjJjYTA" ,
+name: "ESSENTIALS Daily Body Moisturizer" ,
+priceTag: "$27.00 |  $24.00  with" ,
+priceValue : 27 , 
+caregory : "Hand & Body" , } ,
+
+{ Perkvalue: 24 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESST125-cat.jpg?context=bWFzdGVyfGltYWdlc3wxNzI1OXxpbWFnZS9qcGVnfGltYWdlcy9oZTEvaDc4Lzg4MjE4NDUxMzEyOTQuanBnfGY1ODM0ODUzMDI0ZTM4Yjg1NDI4ODJmODQ1YTg3MDQ3N2RkOGEyNWM3MmFhMzljM2I0MzA4Y2I5NGVkMjE0NjA" ,
+name: "ESSENTIALS Foaming Sunless Tan" ,
+priceTag: "$27.00 |  $24.00 with" ,
+priceValue : 27 , 
+caregory : "Hand & Body" ,  } ,
+
+{ Perkvalue: 30 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESFB150-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxODk0N3xpbWFnZS9qcGVnfGltYWdlcy9oZGYvaDRkLzEwMjkxODI5Mzc1MDA2LmpwZ3xhYWFjOGQwMDNmZjYyNTliYWQwYjFhZDI5MmMzMTBiZDg1Y2U1NDBiZjg0ZDk3M2U1ZTVjNzU4ZTI0YzlkNWU1" ,
+name: "ESSENTIALS Face + Body Sunscreen Broad Spectrum SPF 50" ,
+priceTag: "$34.00 |  $30.00" ,
+priceValue : 34 , 
+caregory : "Hand & Body" ,  } ,
+{ Perkvalue: 197 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU" ,
+name: "REDEFINE Regimen" ,
+priceTag: "$220.00 |  $197.00 with" ,
+priceValue : 220 , 
+caregory : "redefine" , } ,
+
+{ Perkvalue: 322 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRTRF-AAWA125-AATN125-AATL030-AAPL030-ENFM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w4NDEwM3xpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGRkLzEzOTc3NjUzNTQyOTQyLmpwZ3xhN2M4ZTcyYjQxNzhjMjcyNDZiNzk5OTEzOWZhZDA2NzIyNzkyODhiYzY0NjY2ZTk1ZGY4OWQ0NTJjNjc3Njk0" ,
+name: "REDEFINE + Total RF Serum Special" ,
+priceTag: "$358.00 |  $322.00 with" ,
+priceValue : 358 ,
+caregory : "redefine"  , } ,
+
+
+{ Perkvalue: 307 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRLP1-AAWA125-AATN125-AATT030-AAPM030-ENHLSH01-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w0OTY1NnxpbWFnZS9qcGVnfGltYWdlcy9oY2IvaDg4LzEyNzgwOTE0NTA3ODA2LmpwZ3xlOGNmOTZiYjIyZGIxOTk4NGFhMDJiNDY1YzM0NzNjZjg2NDZiZTBkZTkwN2ZiOGIxZTBhNDQ0OWI5NzQ2ODMw" ,
+name: "REDEFINE + Lash Boost Special" ,
+priceTag: "$343.00 |  $307.00 with" ,
+priceValue : 343 , 
+caregory : "redefine"  } ,
+
+{ Perkvalue: 63 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI" ,
+name: "REDEFINE Multi-Function Eye Cream" ,
+priceTag: "$70.00 |  $63.00 with" ,
+priceValue : 70 , 
+caregory : "redefine" , } ,
+
+{ Perkvalue: 204 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPS01-Regimen-Explainer-AMP-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODcyNnxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oNDEvMTQ2MDQwOTQ0MDY2ODYucG5nfGYyNGNkZTQ1ODc2Zjg3OGYzMjZjNDFmMTI4NTdmNzNkOWM0MmIzZTZhMzRkMDE0OTMwNjRkOTZiMDdiZTYyMjk" ,
+name: "REDEFINE AMP MD System" ,
+priceTag: "$227.00 |  $204.00 with" ,
+priceValue : 227 ,
+caregory : "redefine"  , } ,
+
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 , 
+caregory : "redefine"  } ,
+
+{ Perkvalue: 52 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AALS060-Regimen-Explainer-Lip-Renewing-Serum-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMzc3M3xpbWFnZS9wbmd8aW1hZ2VzL2hmYi9oNDEvMTQ2MDQwOTM1ODc0ODYucG5nfGIyNTY2ZTJmMTAzMDc4MDhjZTkyYjYwZDI1MWZlNGNlZWQ2ZGIzYzc3ZjkwN2RjZDY3YmU3NDkwNDIyOWUwYWU" ,
+name: "REDEFINE Lip Renewing Serum" ,
+priceTag: "$58.00 |  $52.00 with" ,
+priceValue : 58 , 
+caregory : "redefine" , } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/IRS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3w0NzYwNXxpbWFnZS9wbmd8aW1hZ2VzL2gzMy9oMmIvMTM3NTgzODU3MTcyNzgucG5nfDU3MDNlODNlMjk0MDZiYWEwODU1NTZhMDg3NDBkNTU4M2EwNGJiY2M1OTZmN2RlMWNlM2UwYmEyZDg5YzViNDM" ,
+name: "REDEFINE Intensive Renewing Serum" ,
+priceTag: "$102.00 |  $91.00 with" ,
+priceValue : 102 ,
+caregory : "redefine"  , } ,
+
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg1Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDM3L2g5ZC8xNDc5ODgzMjU2NjMwMi5qcGd8OTAzYjY3NGU1YTUyNmNkYzcyZGM3NGEyMmQzYjIxY2ZiMTRjYjNjNzhmYWFiMzdkOGI0ODM1MjdiMTI0Nzk2Zg" ,
+name: "REDEFINE Daily Clay Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "redefine"  } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWF125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg2NjZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGFjL2hiOC8xMTg1NDA1NjkxNDk3NC5qcGd8MDhiNGM0ZDJmMTliNzhmYjk0ZDJmYzQ4YjhhM2E2YjU2NGE1YzRjZTExNjJmYzU3ZjFmNTc3MmE3N2UyNTMwNw" ,
+name: "REDEFINE Daily Foaming Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "redefine" , } ,
+
+{ Perkvalue: 45 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AATN125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTk1ODd8aW1hZ2UvanBlZ3xpbWFnZXMvaGFkL2hmMi8xMTg1NDA1MzMxMDQ5NC5qcGd8Njg0OTgyMDU0NGI3MDhkNDY5OWZmMWI2YTYxMTg3OWZhODM5NTk3MTBjNTVlOTdiMTQ4YWE4ZmUzMWZkZDg4OA" ,
+name: "REDEFINE Pore Refining Toner" ,
+priceTag: "$50.00 |  $45.00 with" ,
+priceValue : 50 ,
+caregory : "redefine"  , } ,
+
+
+{ Perkvalue: 81 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AATT030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wyMDczNjR8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2gyMS8xMTg1NDA1NDM5MTgzOC5qcGd8MjZkNzAxMTI1YTBiMjgzZjNmMTIyMjA0NWE1ZTFmZjcyZDNjY2Y1OTU2MjNmNjY5ZDEyNGMwNzM4OTU3MDEyNw" ,
+name: "REDEFINE Triple Defense Cream Broad Spectrum SPF 30" ,
+priceTag: "$90.00 |  $81.00 with" ,
+priceValue : 90 , 
+caregory : "redefine"  } ,
+
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg1Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDM3L2g5ZC8xNDc5ODgzMjU2NjMwMi5qcGd8OTAzYjY3NGU1YTUyNmNkYzcyZGM3NGEyMmQzYjIxY2ZiMTRjYjNjNzhmYWFiMzdkOGI0ODM1MjdiMTI0Nzk2Zg" ,
+name: "REDEFINE Daily Clay Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "redefine"  } ,
+
+{ Perkvalue: 81 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AATL030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTY3MDB8aW1hZ2UvanBlZ3xpbWFnZXMvaDg2L2g4Yi8xMTg1NDA1MjI2MTkxOC5qcGd8ZmNlMmFlNjExNTQxNmFlYWM0OGI2Nzc1NmFjMTUyYmUyN2NlN2IyY2M4MDEyM2Q2MzNiZjdmMmJiYmNiMjBmMQ" ,
+name: "REDEFINE Triple Defense Lotion Broad Spectrum SPF 30" ,
+priceTag: "$90.00 |  $81.00 with" ,
+priceValue : 90 , 
+caregory : "redefine" , } ,
+
+{ Perkvalue: 81 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAPM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wyMTIzODl8aW1hZ2UvanBlZ3xpbWFnZXMvaDEzL2g4Ni8xMTg1NDA1MTYwNjU1OC5qcGd8MmM0ZmI0YjBlOGU4NzBiM2QzMGVjMDhhNGZkZGI0MTQzYzgxZDhiNTA3MzgyYzIzYzVjNmE0MTBjYzFmNjQ1Mw" ,
+name: "REDEFINE Overnight Restorative Cream" ,
+priceTag: "$90.00 |  $81.00 with" ,
+priceValue : 90 ,
+caregory : "redefine"  , } ,
+
+
+{ Perkvalue: 81 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAPL030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTk1NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaDkxL2hjZi8xMTg1NDA1MDYyMzUxOC5qcGd8NGJkY2YyMzM0Y2MzMmYyNjQ3ODQ0ZjhhNDgxMmZkYmFjNDgzNGI5YjcyYmY3YjM1MjkwODBjYmVkOTBjMzhlMw" ,
+name: "REDEFINE Overnight Reparative Lotion" ,
+priceTag: "$90.00 |  $81.00 with" ,
+priceValue : 90 , 
+caregory : "redefine"  } ,
+{ Perkvalue: 197 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU" ,
+name: "Redefine Regimen" ,
+priceTag: "$220.00 |  $197.00 with" ,
+priceValue : 220 , 
+caregory : "Regimens"  , } ,
+
+{ Perkvalue: 175 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RVWA125-RVTG125-RVSS050-RVTTG50-REVERSE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MTY5NHxpbWFnZS9wbmd8aW1hZ2VzL2gyNy9oZWIvMTM3NTgzODQzNDEwMjIucG5nfGI3NmIzMjI0NTc2Y2RiZjZlNTdhYjg0ZDM4ZjM0MmM2M2U5Yjg5Y2RiNTM1NTM1NGFlOWNiY2E5ZTVkYTM5NWY" ,
+name: "REVERSE Regimen" ,
+priceTag: "$195.00 |  $175.00 with" ,
+priceValue : 195 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 185 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOWA125-SOTT050-SOMO050-SOSS050-SOOTHE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MDc1MHxpbWFnZS9wbmd8aW1hZ2VzL2g5Zi9oYWMvMTM3NTgzODUxMjc0NTQucG5nfGFmOTE5ZGY1MjdhZmFkNDhhNzNiOTkyYTYzODAxNzI4OTE3ZGQ5Zjk3YzRlOGRlNTIzYzU3MzZlMTQzNGEzNTI" ,
+name: "SOOTHE Regimen" ,
+priceTag: "$185.00 |  $166.00 with" ,
+priceValue : 185 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 171 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/UNWA125-UNTJ125-UNTT030-UNSS030-UNBLEMISH-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w1NDk5N3xpbWFnZS9wbmd8aW1hZ2VzL2g2YS9oOTYvMTM3NTgzODQ4NjUzMTAucG5nfDNhOWMxMGU5MjIzMGEyZjNhNTZjNWVkMjUxYmJjODI5YmNlODhjODBkNzJjZTA4ZDk1YTk0Yzk0ZjkyNzdhZmU" ,
+name: "UNBLEMISH Regimen" ,
+priceTag: "$190.00 |  $171.00 with" ,
+priceValue : 190 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 80 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/spotless-regimen-UNRS001.jpg?context=bWFzdGVyfGltYWdlc3wxOTY4NHxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGU3LzEzODE0NjU0MzA0Mjg2LmpwZ3xjNGJiOWMyMDczMDlmMzU4OWRjM2FiNjhkNjgxY2QyYzY1ZjI1NzNlY2NlNWZmMGE1NWZjNTUxMjNkOGIzY2Q3" ,
+name: "SPOTLESS Regimen" ,
+priceTag: "$89.00 |  $80.00 with" ,
+priceValue : 89 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 120 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCWA125-RCTTO50-RCSP040-REGHARGE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NHxpbWFnZS9wbmd8aW1hZ2VzL2hkNi9oNDMvMTM3NTgzODQ2MDMxNjYucG5nfGQ4MzYxODU0ZDcxOTZiOTdlODg3NmZmZTAzZGQ1MGQ5Yjg0YzBhODk3NzJhYzM5NzZlNjQ1NjQzNGQ3NTY0ZmE" ,
+name: "RECHARGE Regimen" ,
+priceTag: "$134.00 |  $120.00 with" ,
+priceValue : 134 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 322 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRTRF-AAWA125-AATN125-AATL030-AAPL030-ENFM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w4NDEwM3xpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGRkLzEzOTc3NjUzNTQyOTQyLmpwZ3xhN2M4ZTcyYjQxNzhjMjcyNDZiNzk5OTEzOWZhZDA2NzIyNzkyODhiYzY0NjY2ZTk1ZGY4OWQ0NTJjNjc3Njk0" ,
+name: "REDEFINE + Total RF Serum Special" ,
+priceTag: "$358.00 |  $322.00 with" ,
+priceValue : 358 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 300 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRVRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NDMwOHxpbWFnZS9qcGVnfGltYWdlcy9oYzIvaGMzLzEzOTc3NjU2NTI0ODMwLmpwZ3wzZDI3Mzk1ZTZhMjVjMTMwMWZhMTYzNTNmZjVlYTAxM2YwMzYwYTg5OWU1NTNlYjY3MTYwNDQzNGY3ZTA4ZGY3" ,
+name: "REVERSE + Total RF Serum Special" ,
+priceTag: "$334.00 |  $300.00 with" ,
+priceValue : 334 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 295 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HUNRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NTM5MnxpbWFnZS9qcGVnfGltYWdlcy9oY2YvaDhjLzEzOTc3NjU3OTY2NjIyLmpwZ3xkYzVkYmZhM2IyYmU1ZmFiZWI5NTMxYjQxYzhkZDNlNDMxMDYzNmFiZDg5NzUzNTc5NDI4NDllYWY0YzEzNmIz" ,
+name: "UNBLEMISH + Total RF Serum Special" ,
+priceTag: "$328.00 |  $295.00 with" ,
+priceValue : 328 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 290 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HSORGTRF-SOWA125-SOTT050-SOMO050-SOSS050-ENFM030-900x900-tablet-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTAzNjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGY3L2g5MS8xMzk3NzY1Nzc3MDAxNC5qcGd8ZDhkOGZhNDhhNjAwMTdjN2YxNmRhMjlkYjkzZmVjYzgyMTcwY2VhMmNlMjhlZDQ5NGJhMzExNWQxNjljYjM0Mg" ,
+name: "SOOTHE + Total RF Serum Special" ,
+priceTag: "$323.00 |  $290.00 with" ,
+priceValue : 323 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 244 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRCRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w3ODAwMXxpbWFnZS9qcGVnfGltYWdlcy9oNmYvaGE3LzEzOTc3NjU1NTc0NTU4LmpwZ3w3MjA1Y2RhNjE1N2VhNWFkN2U3ZDUyNmVkY2NkZWI5MWNhNzQ0N2QxN2U4ZjE1ODYxZDIxMmI1MzA1Y2UyZmEy" ,
+name: "RECHARGE + Total RF Serum Special" ,
+priceTag: "$272.00 |  $244.00 with" ,
+priceValue : 272 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 307 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRLP1-AAWA125-AATN125-AATT030-AAPM030-ENHLSH01-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w0OTY1NnxpbWFnZS9qcGVnfGltYWdlcy9oY2IvaDg4LzEyNzgwOTE0NTA3ODA2LmpwZ3xlOGNmOTZiYjIyZGIxOTk4NGFhMDJiNDY1YzM0NzNjZjg2NDZiZTBkZTkwN2ZiOGIxZTBhNDQ0OWI5NzQ2ODMw" ,
+name: "REDEFINE + Lash Boost Special" ,
+priceTag: "$343.00 |  $307.00 with" ,
+priceValue : 343 , 
+caregory : "Regimens"} ,
+{ Perkvalue: 166 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOWA125-SOTT050-SOMO050-SOSS050-SOOTHE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MDc1MHxpbWFnZS9wbmd8aW1hZ2VzL2g5Zi9oYWMvMTM3NTgzODUxMjc0NTQucG5nfGFmOTE5ZGY1MjdhZmFkNDhhNzNiOTkyYTYzODAxNzI4OTE3ZGQ5Zjk3YzRlOGRlNTIzYzU3MzZlMTQzNGEzNTI" ,
+name: "SOOTHE Regimen" ,
+priceTag: "$185.00 |  $166.00 with" ,
+priceValue : 185 , 
+caregory : "Soothe"  , } ,
+
+{ Perkvalue: 290 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HSORGTRF-SOWA125-SOTT050-SOMO050-SOSS050-ENFM030-900x900-tablet-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTAzNjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGY3L2g5MS8xMzk3NzY1Nzc3MDAxNC5qcGd8ZDhkOGZhNDhhNjAwMTdjN2YxNmRhMjlkYjkzZmVjYzgyMTcwY2VhMmNlMjhlZDQ5NGJhMzExNWQxNjljYjM0Mg" ,
+name: "SOOTHE + Total RF Serum Special" ,
+priceTag: "$323.00 |  $290.00 with" ,
+priceValue : 323 ,
+caregory : "Soothe" , } ,
+
+
+{ Perkvalue: 276 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "SOOTHE + Lash Boost Special" ,
+priceTag: "$307.00 |  $276.00 with" ,
+priceValue : 307 , 
+caregory : "Soothe" } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SORMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTg4MzN8aW1hZ2UvanBlZ3xoOTEvaDUzLzEzNjE1ODc4Mjc1MTAyLmpwZ3wwY2QzZDVmYTIzNDhlYjY1YjMzYWRjN2RkMzJmNzVlNGQxZWM1MTBhZjA1YjgwMzhkMWI4ZTNhMjM5ODRhMmJi" ,
+name: "SOOTHE Rescue Mask" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue :60 ,
+caregory : "Soothe" } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOWA125-Regimen-Explainer-Step1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3w0MjgzNnxpbWFnZS9wbmd8aW1hZ2VzL2g2My9oOTUvMTM0MjgwMjU5ODMwMDYucG5nfDY0OWEyMzA0Mzg3YTE0YjlhM2NiYTUxOGM3YWQ3ZGVmYWNkOGIyNmJkMzFlNzNmZGM3NDY5OGFjY2ZiMDlkYjY" ,
+name: "SOOTHE Calming Gel Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 ,
+caregory : "Soothe"  } ,
+
+{ Perkvalue: 81 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOTT050-Regimen-Explainer-Step2-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyNjQxNHxpbWFnZS9wbmd8aW1hZ2VzL2gyOS9oOTYvMTM0MjgwMjY4MDIyMDYucG5nfDRhMjNlMzg3NWUxNWEyYmRmZTc5MzRlMzQ2ZDY1OWQ1YTRmZmZiZTA3NTVmMThjOWY3NmUyM2UxNmI1ZWFiMTU" ,
+name: "SOOTHE Sensitive Skin Treatment" ,
+priceTag: "$90.00 |  $81.00" ,
+priceValue : 90 , 
+caregory : "Soothe" } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOMO050-Regimen-Explainer-Step3-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3w1MzU5MXxpbWFnZS9wbmd8aW1hZ2VzL2gyMi9oZjkvMTM0MjgwMjc2NTQxNzQucG5nfGUzMTdjNzk3MzgyZmY1YWRlNjA3YWIzMmM4ZDZhYjhiYmY5N2IyZDRlNWZlYTZhNjE3ZDFmNzQ0ZjJjODIwMjE" ,
+name: "SOOTHE Moisturizing Rescue Cream" ,
+priceTag: "$60.00 |  $54.00 with" ,
+priceValue : 60 ,
+caregory : "Soothe"  } ,
+
+{ Perkvalue: 36 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOSS050-Regimen-Explainer-Step4-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wzNjYwNHxpbWFnZS9wbmd8aW1hZ2VzL2g2ZS9oNzcvMTM0MjgwMjg4NjY1OTAucG5nfGZiODQ3NmM2ZGFhMTY4ZmUyMTk1MmVhNzg2ZmRmNjUyMWYxZTZjYjk0Y2I2ZWU2ZjdlZjcxOWRhMTc5ZWQ2ZTc" ,
+name: "SOOTHE Daily Mineral Sunscreen SPF" ,
+priceTag: "$40.00 |  $36.00  with" ,
+priceValue : 40 ,
+caregory : "Soothe"  } ,
+{ Perkvalue: 80 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/spotless-regimen-UNRS001.jpg?context=bWFzdGVyfGltYWdlc3wxOTY4NHxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGU3LzEzODE0NjU0MzA0Mjg2LmpwZ3xjNGJiOWMyMDczMDlmMzU4OWRjM2FiNjhkNjgxY2QyYzY1ZjI1NzNlY2NlNWZmMGE1NWZjNTUxMjNkOGIzY2Q3" ,
+name: "SPOTLESS Regimen" ,
+priceTag: "$89.00 |  $80.00 with" ,
+priceValue : 89 , 
+caregory : "Spotless", } ,
+
+{ Perkvalue: 267 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/TAXPSEG-720x600-desktop.jpg?context=bWFzdGVyfGltYWdlc3wyMDEyOHxpbWFnZS9qcGVnfGltYWdlcy9oNDYvaDkwLzkxNzEyNDU5ODk5MTguanBnfGQ0N2UwNGZhOGUzNjAyYzM1Y2I2NjI4ZGY2NjczYzZkYWQ2OTVhY2Q3YmIwMWI1NjFkNjQ3ZmJmZWJkMWY0MmY" ,
+name: "SPOTLESS Power Up Special" ,
+priceTag: "$297.00 |  $267.00 with" ,
+priceValue : 297, 
+caregory : "Spotless", } ,
+
+{ Perkvalue: 30 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/UNSW125-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTYwOTJ8aW1hZ2UvanBlZ3xoZTEvaDUyLzg4MjE4NjUwMjE0NzAuanBnfGQ3MmQzM2E2YTA0ZjE5OWZmODIxYjAxNGEyZjIyODRkNzBiZjQwNzc4MmNmYWZkYjVlOTRmZDViMTEwZTNjNzE" ,
+name: "SPOTLESS Daily Acne Wash" ,
+priceTag: "$34.00 |  $30.00 with" ,
+priceValue : 34, 
+caregory : "Spotless", } ,
+
+{ Perkvalue: 70 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/UNST030-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTc4Mzl8aW1hZ2UvanBlZ3xoNTEvaGVkLzg4MjE4NjQ5NTU5MzQuanBnfDY3ZjE3NzVkYTA1NjNhYzY1ZWZiZDNiZDg0MTllZTkyYmY1NzAxMTRlODQxODYwY2IyMjYyZWU0OTkwMzRjYWQ" ,
+name: "SPOTLESS Acne Clearing Treatment" ,
+priceTag: "$78.00 |  $70.00 with" ,
+priceValue : 78 , 
+caregory : "Spotless", } ,
+
+
   ];
  
   var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
@@ -293,7 +877,69 @@
   });
   
   function handlesort(filter){
-   var sel=document.querySelector("#cateogry").value 
+   var sel=document.querySelector("#category").value 
+   
+
+   
+  
+    filter=originaldata.filter(function(el,i,arr){
+       
+      
+       return el.caregory==sel
+      
+       
+        
+    
+   })
+   console.log(filter)
+   displayData(filter)
+  
+
+  
+
+  }
+  function handlesorty(filter){
+   var sel=document.querySelector("#skinconcern").value 
+   
+
+   
+  
+    filter=originaldata.filter(function(el,i,arr){
+       
+      
+       return el.caregory==sel
+       
+        
+    
+   })
+   displayData(filter)
+  
+
+  
+
+  }
+  function handlesorti(filter){
+   var sel=document.querySelector("#applicationarea").value 
+   
+
+   
+  
+    filter=originaldata.filter(function(el,i,arr){
+       
+      
+       return el.caregory==sel
+       
+        
+    
+   })
+   displayData(filter)
+  
+
+  
+
+  }
+  function handlesor(filter){
+   var sel=document.querySelector("#productline").value 
    
 
    
@@ -354,7 +1000,9 @@ function displayCart(el) {
     console.log(el);
     CartData.push(el);
     console.log(CartData);
+    alert("Your Item has been added Successfully")
     localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
     
   }
 </script>
