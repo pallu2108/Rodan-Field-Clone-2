@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      @media all and (min-width:400px) and (max-width:800px) {
+          #container{
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+         gap: 20px;
+          }
+          .classw{
+              font-size: 15px;
+              display:block;
+              width: 100%;
+              text-align: center;
+              margin: auto;
+          }
+          .classw p{
+              text-align: center;
+              font-weight: bold;
+          }
+          .class{
+              box-sizing: border-box;
+              text-align: center;
+              padding-left: 94px;
+          }
+          
+      }
+      @media all and (min-width:270px) and (max-width:400px) {
+          #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 90%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -13px;
+              font-weight: bold;
+          }
+          h2{
+              margin-left:-10px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+         
+          
+      }
+      @media all and (min-width:0px) and (max-width:270px)
+       {
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 100%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -19px;
+              font-weight: bold;
+          }
+          .classw p{
+              /* margin: -14px; */
+              margin-left: 70px;
+
+          }
+          h1{
+              font-size: 20px;
+              margin-left: 89px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+      }
+    </style>
+  </head>
+  <body>
+      <div class="class">
+    <h1>DRY SKIN</h1>
+    <div class="classw">
+      <p>
+        Environmental factors, hormones and certain products can lead to itchy, tight and dry skin. Our targeted products help hydrate and prevent future dryness.
+      </p>
+    </div>
+</div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var originaldata = [
+
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 ,
+caregory : "Dry Skin"  } ,
+
+
+{ Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5" ,
+name: "Rodan + Fields Active Hydration Body Replenish" ,
+priceTag: "$66.00 |  $59.00 with" ,
+priceValue : 66 , 
+caregory : "Dry Skin"   , } ,
+
+{ Perkvalue: 74 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENPS125-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODU1NXxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZjgvMTQ1MzIxNjc2MzA4NzgucG5nfGM0YTc0NjM0YWIzM2QxZDZlOTc0NTdmYjA4M2EyNDA5NGJhODg3ZDQwMGJjZjdiMTZlYTI2MjYwNjI2Y2JhZGE" ,
+name: "Rodan + Fields Enhancements Micro-Dermabrasion Paste" ,
+priceTag: "$83.00 |  $74.00 with" ,
+priceValue : 83,
+caregory : "Dry Skin"  , } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Dry Skin"  } ,
+
+{ Perkvalue: 24 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESBL200-cat.jpg?context=bWFzdGVyfGltYWdlc3wyMjg3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTYvaDJhLzg4MjE4NDQ4NjkxNTAuanBnfGQ2M2NlOTA4ZWU1ODZjZjkyNDQwZTNhN2VhM2FjM2E1MmZjMjI3YWEyMjkzYmRmZDQ5ZGM2OGJlMWI4MjJjYTA" ,
+name: "ESSENTIALS Daily Body Moisturizer" ,
+priceTag: "$27.00 |  $24.00 with" ,
+priceValue : 27 ,
+caregory : "Dry Skin"   } ,
+
+
+{ Perkvalue: 30 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESFB150-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxODk0N3xpbWFnZS9qcGVnfGltYWdlcy9oZGYvaDRkLzEwMjkxODI5Mzc1MDA2LmpwZ3xhYWFjOGQwMDNmZjYyNTliYWQwYjFhZDI5MmMzMTBiZDg1Y2U1NDBiZjg0ZDk3M2U1ZTVjNzU4ZTI0YzlkNWU1" ,
+name: "ESSENTIALS Face + Body Sunscreen Broad Spectrum SPF 50" ,
+priceTag: "$34.00 |  $30.00 with" ,
+priceValue : 34 ,
+caregory : "Dry Skin"   } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ESLS002-cat.jpg?context=bWFzdGVyfGltYWdlc3wzNjk5NHxpbWFnZS9qcGVnfGltYWdlcy9oMzUvaDRlLzg4MjE4NDQ5Njc0NTQuanBnfGQ5M2Q2OWZjNDEzM2Q4MTMwYTc5N2M3MThhYzdiODVjYTMzZjY2N2Y3MWVjYTNlZWNmNmRlMmEzMGNmNDlhY2Q" ,
+name: "ESSENTIALS Lip Shield SPF 25 (Two-Pack)" ,
+priceTag: "$19.00 |  $17.00 with" ,
+priceValue : 102 , 
+caregory : "Dry Skin"  } ,
+
+
+]
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+
+  
+  
+  
+ 
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#container").append(box);
+  });
+
+ 
+  function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+  // document.querySelector("#container").innerHTML=""
+</script>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      @media all and (min-width:400px) and (max-width:800px) {
+          #container{
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+         gap: 20px;
+          }
+          .classw{
+              font-size: 15px;
+              display:block;
+              width: 100%;
+              text-align: center;
+              margin: auto;
+          }
+          .classw p{
+              text-align: center;
+              font-weight: bold;
+          }
+          .class{
+              box-sizing: border-box;
+              text-align: center;
+              padding-left: 94px;
+          }
+          
+      }
+      @media all and (min-width:270px) and (max-width:400px) {
+          #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 90%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -13px;
+              font-weight: bold;
+          }
+          h2{
+              margin-left:-10px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+         
+          
+      }
+      @media all and (min-width:0px) and (max-width:270px)
+       {
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 100%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -19px;
+              font-weight: bold;
+          }
+          .classw p{
+              /* margin: -14px; */
+              margin-left: 70px;
+
+          }
+          h1{
+              font-size: 20px;
+              margin-left: 89px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+      }
+    </style>
+  </head>
+  <body>
+      <div class="class">
+    <h1>DERMACOSMATICS</h1>
+    <div class="classw">
+      <p>
+        Our multitaskers combine dermatology-inspired skincare benefits with immediate complexion-perfecting results.
+      </p>
+    </div>
+</div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var originaldata = [
+    { Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/DERDS-detail-1-.jpg?context=bWFzdGVyfGltYWdlc3wyOTY1MnxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaGFjLzEzNTMzMTM3Njk4ODQ2LmpwZ3xjOWYzNDA1ZjRiODE0ZTJiMDNiZGIxOTVhZTQ1ZWUwYTI4MDAxYTE4ODRhZDZhYjNlOTE4YTE0ZTcwZDM5NDg5" ,
+name: "Radiant Defense Perfecting Liquid SPF 30" ,
+priceTag: "$66.00 |  $59.00  with" ,
+priceValue : 66 , 
+caregory :  "Dermacosmetics" , } ,
+
+{ Perkvalue: 34 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/DERDLB1-cat.jpg?context=bWFzdGVyfGltYWdlc3wxMDkyNHxpbWFnZS9qcGVnfGltYWdlcy9oNGEvaDE4Lzg4MjE4NDQxNDgyNTQuanBnfDVmY2E4ZmM1YzdlNjQxMmI4YjgzNGY4MDIwNWVlZDc2MmNhYzVjN2FjZmQyMTFiNmU1NDc4Y2RiNGQyOWFmZjk" ,
+name: "Radiant Defense Liquid Brush" ,
+priceTag: "$38.00 |  $34.00  with" ,
+priceValue : 38 , 
+caregory :  "Dermacosmetics" , } ,
+]
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+
+  
+  
+  
+ 
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#container").append(box);
+  });
+
+ 
+  function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+  // document.querySelector("#container").innerHTML=""
+</script>

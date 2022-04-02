@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        #container{
+            width: 80%;
+            margin: auto;
+            margin-top: 64px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,500px);
+            gap: 20px;
+        }
+        #container>div{
+            
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
+        a{
+            display: inline-block;
+            position: relative;
+            color: black;
+            padding: 0.25rem;
+            text-decoration: none;
+            /* margin-right: -1px; */
+            font-weight: bold;
+            margin-left: -6px;
+            /* line-height: 1; */
+            
+        }
+        a::before{
+            content: "";
+            position: absolute;
+            left:0;
+           
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: blue;
+            transition: width 0.24s ease-out;
+           
+          
+          
+         
+        }
+        a:hover{
+            background-color: lightgray;
+        }
+        a:hover::before{
+            width: 100%;
+           
+         
+        }
+        div>div{
+           
+            margin-top: 24px;
+            padding-left: 2px;
+          
+        }
+        @media all and (min-width:300px) and (max-width:670px){
+            #container{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: max-content;
+            }
+            a{
+                font-size: 12px;
+            }
+            h3{
+                font-size: 14px;
+            }
+
+            
+        }
+        @media all and (min-width:0px) and (max-width:320px){
+            #container{
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: max-content;
+            }
+            a{
+                font-size: 12px;
+            }
+            h3{
+                font-size: 14px;
+            }
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h3>Shop By Category</h3>
+        <div>
+
+            <ul type="none">
+                <li><a href="regiments.html">Regiments</a></li>
+                <li><a href="Faceserums.html">FaceSerums</a></li>
+                <li><a href="Eyelipslashes.html">Eyelips, lips & lashes</a></li>
+                <li><a href="Facemask.html">Face Mask</a></li>
+                <li><a href="Dermacosmetics.html">Darmacosmetics</a></li>
+                <li><a href="hand&body.html">Hand & Body</a></li>
+                <li><a href="regiments.html">Sun Protection</a></li>
+                <li><a href="regiments.html">Pro skinCare Tools </a></li>
+                <li><a href="regiments.html">Accessories</a></li>
+                <li><a href="regiments.html">Special Offers</a></li>
+               
+            </ul>
+        </div>
+        </div>
+        <div>
+            <h3>Shop By Concern</h3>
+        <div>
+
+            <ul type="none">
+                <li><a href="Fine line and deep wrinkles.html">Fine line & deep wrinkles</a></li>
+                <li><a href="regiments.html">Lifting and Firming</a></li>
+                <li><a href="dull&tiredskin.html">Dull & Tired Skin</a></li>
+                <li><a href="regiments.html">Acne & Breakout</a></li>
+                <li><a href="regiments.html">Teen Acne</a></li>
+                <li><a href="regiments.html">Uneven Tone & Brown Spots</a></li>
+                <li><a href="regiments.html">Sensitivity & visible Redness</a></li>
+                <li><a href="regiments.html">Pores and Blackheads</a></li>
+                <li><a href="dryskin.html">Dry Skin</a></li>
+               
+            </ul>
+        </div>
+        </div>
+        <div>
+            <h3>Shop By Product Line</h3>
+        <div>
+
+            <ul type="none">
+                <li><a href="regiments.html">Redifine</a></li>
+                <li><a href="regiments.html">Reverse</a></li>
+                <li><a href="regiments.html">Recharge</a></li>
+                <li><a href="regiments.html">Unblemish</a></li>
+                <li><a href="spotless.html">Spotless</a></li>
+                <li><a href="sothe.html">Sothe</a></li>
+                <li><a href="regiments.html">Enhancements</a></li>
+                <li><a href="regiments.html">Essentials</a></li>
+                <li><a href="regiments.html">Dermacosmetics</a></li>
+                <li><a href="regiments.html">Pro skincare Tools</a></li>
+                <li><a href="allproducts.html">All Products</a></li>
+               
+            </ul>
+        </div>
+        </div>
+       
+    </div>
+</body>
+</html>

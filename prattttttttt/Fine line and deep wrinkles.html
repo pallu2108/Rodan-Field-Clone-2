@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      @media all and (min-width:400px) and (max-width:800px) {
+          #container{
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+         gap: 20px;
+          }
+          .classw{
+              font-size: 15px;
+              display:block;
+              width: 100%;
+              text-align: center;
+              margin: auto;
+          }
+          .classw p{
+              text-align: center;
+              font-weight: bold;
+          }
+          .class{
+              box-sizing: border-box;
+              text-align: center;
+              padding-left: 94px;
+          }
+          
+      }
+      @media all and (min-width:270px) and (max-width:400px) {
+          #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 90%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -13px;
+              font-weight: bold;
+          }
+          h2{
+              margin-left:-10px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+         
+          
+      }
+      @media all and (min-width:0px) and (max-width:270px)
+       {
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 100%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -19px;
+              font-weight: bold;
+          }
+          .classw p{
+              /* margin: -14px; */
+              margin-left: 70px;
+
+          }
+          h1{
+              font-size: 20px;
+              margin-left: 89px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FACE LINES & WRINKLES</h1>
+    <div class="classw">
+      <p>
+        As we age, our skin’s natural processes slow down, causing visible signs of aging. Our targeted products help reduce the appearance of fine lines and wrinkles for younger-looking skin.
+      </p>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var originaldata =[
+{ Perkvalue: 197 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU" ,
+name: "Redefine Regimen" ,
+priceTag: "$220.00 |  $197.00 with" ,
+priceValue : 220 , 
+caregory : "Fine lines  and deep wrinkles"  , } ,
+
+{ Perkvalue: 63 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/MFEC-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3wyMzc3NHxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oZmMvMTM3NTgzODU0NTUxMzQucG5nfDNmYWYyNzdiZGY5OWIyY2UzMDYyZDliYmM2YmUzMTRmOGY3Yzg0YmY1ZjY2YjgyYWU1OGNhZDZiN2IzMjViZGI" ,
+name: "REDEFINE Multi-Function Eye Cream" ,
+priceTag: "$70.00 |  $63.00 with" ,
+priceValue : 70 ,
+caregory : "Fine lines  and deep wrinkles" , } ,
+
+{ Perkvalue: 204 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAAPS01-Regimen-Explainer-AMP-MD-System-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODcyNnxpbWFnZS9wbmd8aW1hZ2VzL2gzNS9oNDEvMTQ2MDQwOTQ0MDY2ODYucG5nfGYyNGNkZTQ1ODc2Zjg3OGYzMjZjNDFmMTI4NTdmNzNkOWM0MmIzZTZhMzRkMDE0OTMwNjRkOTZiMDdiZTYyMjk" ,
+name: "REDEFINE AMP MD System" ,
+priceTag: "$227.00 |  $204.00 with" ,
+priceValue : 227 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 54 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AARMF50-cat.jpg?context=bWFzdGVyfHJvb3R8MTUyMTd8aW1hZ2UvanBlZ3xoYTUvaDliLzEzNjE1MDM2MTcwMjcwLmpwZ3xhM2U4ZGUyYzhhOGNhOTBiM2I0NjE4YjU1MTM5MjUwMGVhOTJhZjdlNzcwOTU2NmEwMDEwZjNmNmEyNDc1OGUz" ,
+name: "REDEFINE Rejuvenation Mask" ,
+priceTag: "$60.00 |  $54.00  with" ,
+priceValue : 60 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 52 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AALS060-Regimen-Explainer-Lip-Renewing-Serum-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMzc3M3xpbWFnZS9wbmd8aW1hZ2VzL2hmYi9oNDEvMTQ2MDQwOTM1ODc0ODYucG5nfGIyNTY2ZTJmMTAzMDc4MDhjZTkyYjYwZDI1MWZlNGNlZWQ2ZGIzYzc3ZjkwN2RjZDY3YmU3NDkwNDIyOWUwYWU" ,
+name: "REDEFINE Lip Renewing Serum" ,
+priceTag: "$58.00 |  $52.00 with" ,
+priceValue : 58 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 91 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/IRS-Regimen-Explainer-GLOBAL-570x570.png?context=bWFzdGVyfGltYWdlc3w0NzYwNXxpbWFnZS9wbmd8aW1hZ2VzL2gzMy9oMmIvMTM3NTgzODU3MTcyNzgucG5nfDU3MDNlODNlMjk0MDZiYWEwODU1NTZhMDg3NDBkNTU4M2EwNGJiY2M1OTZmN2RlMWNlM2UwYmEyZDg5YzViNDM" ,
+name: "REDEFINE Intensive Renewing Serum" ,
+priceTag: "$102.00 |  $91.00" ,
+priceValue : 102 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 100 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEFG1-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wyMjI3N3xpbWFnZS9wbmd8aW1hZ2VzL2hkMS9oM2MvMTQ1MzIxNjY2MTUwNzAucG5nfGZlMDQ0NDRlMjczNDFlZjdkYWVmNjkwZWY4MDAwM2I4MjMwZGZiMzU3ZTViZGNlYjllNzBiZjAwY2FlZDU5NzA" ,
+name: "Active Hydration Serum" ,
+priceTag: "$112.00 |  $100.00 with" ,
+priceValue : 112 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 64 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENHEY15-720x600-DESKTOP-v4.jpg?context=bWFzdGVyfGltYWdlc3w2MDYyOXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGI2LzEzNTMzMTczODc0NzE4LmpwZ3w0MGI1MmM0OTExMmRiMzUzYzg5YTIyNWJjZTdiOTZkNzk1ZTVmOTk2MTBhY2IzZTcwNzhkZDI4NTUxZDI5Zjhh" ,
+name: "Active Hydration Bright Eye Complex" ,
+priceTag: "$72.00 |  $64.00 with" ,
+priceValue : 72 ,
+caregory : "Fine lines  and deep wrinkles"  } ,
+
+{ Perkvalue: 59 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/ENBR001-720x600-DESKTOP.jpg?context=bWFzdGVyfHJvb3R8MTg2NDR8aW1hZ2UvanBlZ3xoNWMvaGQ5LzEzNTMzMTYzMDk0MDQ2LmpwZ3xiNmNjNjE3YmJmOTI4Y2UzZjAwM2RkMDQwZDNkNmNiZDQyZWQzMzQ4N2ZjZmMxOWY1OGEzYjQ1MTFiM2M1MGE5" ,
+name: "Rodan + Fields Active Hydration Body Replenish" ,
+priceTag: "$66.00 |  $59.00  with" ,
+priceValue : 66 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg1Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDM3L2g5ZC8xNDc5ODgzMjU2NjMwMi5qcGd8OTAzYjY3NGU1YTUyNmNkYzcyZGM3NGEyMmQzYjIxY2ZiMTRjYjNjNzhmYWFiMzdkOGI0ODM1MjdiMTI0Nzk2Zg" ,
+name: "REDEFINE Daily Clay Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 40 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWF125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTg2NjZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGFjL2hiOC8xMTg1NDA1NjkxNDk3NC5qcGd8MDhiNGM0ZDJmMTliNzhmYjk0ZDJmYzQ4YjhhM2E2YjU2NGE1YzRjZTExNjJmYzU3ZjFmNTc3MmE3N2UyNTMwNw" ,
+name: "REDEFINE Daily Foaming Cleanser" ,
+priceTag: "$45.00 |  $40.00 with" ,
+priceValue : 45 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+{ Perkvalue: 45 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AATN125-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3wxOTk1ODd8aW1hZ2UvanBlZ3xpbWFnZXMvaGFkL2hmMi8xMTg1NDA1MzMxMDQ5NC5qcGd8Njg0OTgyMDU0NGI3MDhkNDY5OWZmMWI2YTYxMTg3OWZhODM5NTk3MTBjNTVlOTdiMTQ4YWE4ZmUzMWZkZDg4OA" ,
+name: "REDEFINE Pore Refining Toner" ,
+priceTag: "$50.00 |  $45.00  with" ,
+priceValue : 50 , 
+caregory : "Fine lines  and deep wrinkles" } ,
+
+    ];
+
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+
+  
+  
+  
+ 
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#container").append(box);
+  });
+
+ 
+  function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+  // document.querySelector("#container").innerHTML=""
+</script>

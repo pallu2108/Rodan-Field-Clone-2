@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 3rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #container {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 30px;
+        /* overflow: ; */
+      }
+
+      img {
+        height: 60%;
+        width: 100%;
+
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      @media all and (min-width:400px) and (max-width:800px) {
+          #container{
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+         gap: 20px;
+          }
+          .classw{
+              font-size: 15px;
+              display:block;
+              width: 100%;
+              text-align: center;
+              margin: auto;
+          }
+          .classw p{
+              text-align: center;
+              font-weight: bold;
+          }
+          .class{
+              box-sizing: border-box;
+              text-align: center;
+              padding-left: 94px;
+          }
+          
+      }
+      @media all and (min-width:270px) and (max-width:400px) {
+          #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 90%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -13px;
+              font-weight: bold;
+          }
+          h2{
+              margin-left:-10px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+         
+          
+      }
+      @media all and (min-width:0px) and (max-width:270px)
+       {
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+          }
+          .classw{
+              font-size: 13px;
+              display:block;
+              width: 100%;
+              /* line-height: 0.4px; */
+              /* text-align: center; */
+              /* margin-right: 2rem; */
+              padding-left: -19px;
+              font-weight: bold;
+          }
+          .classw p{
+              /* margin: -14px; */
+              margin-left: 70px;
+
+          }
+          h1{
+              font-size: 20px;
+              margin-left: 89px;
+          }
+          .buttonwalla{
+            padding: 10px 106px 10px 106px;
+            
+          }
+         
+      }
+    </style>
+  </head>
+  <body>
+    <h1>REGIMES</h1>
+    <div class="classw">
+      <p>
+        Our multi-step skincare "Regimens"s target your primary skin concern.
+        They’re easy to use and take the guesswork out of skincare by delivering
+        our Multi-Med Therapy approach — the right ingredients, in the right
+        formulations in the right order — for visible results.
+      </p>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  var originaldata = [
+{ Perkvalue: 197 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU" ,
+name: "Redefine Regimen" ,
+priceTag: "$220.00 |  $197.00 with" ,
+priceValue : 220 , 
+caregory : "Regimens"  , } ,
+
+{ Perkvalue: 175 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RVWA125-RVTG125-RVSS050-RVTTG50-REVERSE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MTY5NHxpbWFnZS9wbmd8aW1hZ2VzL2gyNy9oZWIvMTM3NTgzODQzNDEwMjIucG5nfGI3NmIzMjI0NTc2Y2RiZjZlNTdhYjg0ZDM4ZjM0MmM2M2U5Yjg5Y2RiNTM1NTM1NGFlOWNiY2E5ZTVkYTM5NWY" ,
+name: "REVERSE Regimen" ,
+priceTag: "$195.00 |  $175.00 with" ,
+priceValue : 195 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 185 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/SOWA125-SOTT050-SOMO050-SOSS050-SOOTHE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w0MDc1MHxpbWFnZS9wbmd8aW1hZ2VzL2g5Zi9oYWMvMTM3NTgzODUxMjc0NTQucG5nfGFmOTE5ZGY1MjdhZmFkNDhhNzNiOTkyYTYzODAxNzI4OTE3ZGQ5Zjk3YzRlOGRlNTIzYzU3MzZlMTQzNGEzNTI" ,
+name: "SOOTHE Regimen" ,
+priceTag: "$185.00 |  $166.00 with" ,
+priceValue : 185 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 171 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/UNWA125-UNTJ125-UNTT030-UNSS030-UNBLEMISH-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3w1NDk5N3xpbWFnZS9wbmd8aW1hZ2VzL2g2YS9oOTYvMTM3NTgzODQ4NjUzMTAucG5nfDNhOWMxMGU5MjIzMGEyZjNhNTZjNWVkMjUxYmJjODI5YmNlODhjODBkNzJjZTA4ZDk1YTk0Yzk0ZjkyNzdhZmU" ,
+name: "UNBLEMISH Regimen" ,
+priceTag: "$190.00 |  $171.00 with" ,
+priceValue : 190 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 80 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/spotless-regimen-UNRS001.jpg?context=bWFzdGVyfGltYWdlc3wxOTY4NHxpbWFnZS9qcGVnfGltYWdlcy9oM2QvaGU3LzEzODE0NjU0MzA0Mjg2LmpwZ3xjNGJiOWMyMDczMDlmMzU4OWRjM2FiNjhkNjgxY2QyYzY1ZjI1NzNlY2NlNWZmMGE1NWZjNTUxMjNkOGIzY2Q3" ,
+name: "SPOTLESS Regimen" ,
+priceTag: "$89.00 |  $80.00 with" ,
+priceValue : 89 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 120 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/RCWA125-RCTTO50-RCSP040-REGHARGE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wyNTQ5NHxpbWFnZS9wbmd8aW1hZ2VzL2hkNi9oNDMvMTM3NTgzODQ2MDMxNjYucG5nfGQ4MzYxODU0ZDcxOTZiOTdlODg3NmZmZTAzZGQ1MGQ5Yjg0YzBhODk3NzJhYzM5NzZlNjQ1NjQzNGQ3NTY0ZmE" ,
+name: "RECHARGE Regimen" ,
+priceTag: "$134.00 |  $120.00 with" ,
+priceValue : 134 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 322 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRTRF-AAWA125-AATN125-AATL030-AAPL030-ENFM030-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w4NDEwM3xpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGRkLzEzOTc3NjUzNTQyOTQyLmpwZ3xhN2M4ZTcyYjQxNzhjMjcyNDZiNzk5OTEzOWZhZDA2NzIyNzkyODhiYzY0NjY2ZTk1ZGY4OWQ0NTJjNjc3Njk0" ,
+name: "REDEFINE + Total RF Serum Special" ,
+priceTag: "$358.00 |  $322.00 with" ,
+priceValue : 358 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 300 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRVRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NDMwOHxpbWFnZS9qcGVnfGltYWdlcy9oYzIvaGMzLzEzOTc3NjU2NTI0ODMwLmpwZ3wzZDI3Mzk1ZTZhMjVjMTMwMWZhMTYzNTNmZjVlYTAxM2YwMzYwYTg5OWU1NTNlYjY3MTYwNDQzNGY3ZTA4ZGY3" ,
+name: "REVERSE + Total RF Serum Special" ,
+priceTag: "$334.00 |  $300.00 with" ,
+priceValue : 334 ,
+caregory : "Regimens" } ,
+
+{ Perkvalue: 295 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HUNRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w5NTM5MnxpbWFnZS9qcGVnfGltYWdlcy9oY2YvaDhjLzEzOTc3NjU3OTY2NjIyLmpwZ3xkYzVkYmZhM2IyYmU1ZmFiZWI5NTMxYjQxYzhkZDNlNDMxMDYzNmFiZDg5NzUzNTc5NDI4NDllYWY0YzEzNmIz" ,
+name: "UNBLEMISH + Total RF Serum Special" ,
+priceTag: "$328.00 |  $295.00 with" ,
+priceValue : 328 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 290 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HSORGTRF-SOWA125-SOTT050-SOMO050-SOSS050-ENFM030-900x900-tablet-1.jpg?context=bWFzdGVyfGltYWdlc3wxMTAzNjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGY3L2g5MS8xMzk3NzY1Nzc3MDAxNC5qcGd8ZDhkOGZhNDhhNjAwMTdjN2YxNmRhMjlkYjkzZmVjYzgyMTcwY2VhMmNlMjhlZDQ5NGJhMzExNWQxNjljYjM0Mg" ,
+name: "SOOTHE + Total RF Serum Special" ,
+priceTag: "$323.00 |  $290.00 with" ,
+priceValue : 323 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 244 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HRCRGTRF-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w3ODAwMXxpbWFnZS9qcGVnfGltYWdlcy9oNmYvaGE3LzEzOTc3NjU1NTc0NTU4LmpwZ3w3MjA1Y2RhNjE1N2VhNWFkN2U3ZDUyNmVkY2NkZWI5MWNhNzQ0N2QxN2U4ZjE1ODYxZDIxMmI1MzA1Y2UyZmEy" ,
+name: "RECHARGE + Total RF Serum Special" ,
+priceTag: "$272.00 |  $244.00 with" ,
+priceValue : 272 , 
+caregory : "Regimens"} ,
+
+{ Perkvalue: 307 ,
+imgUrl: "https://www.rodanandfields.com/en-us/medias/HAAGRLP1-AAWA125-AATN125-AATT030-AAPM030-ENHLSH01-720x600-desktop-1.jpg?context=bWFzdGVyfGltYWdlc3w0OTY1NnxpbWFnZS9qcGVnfGltYWdlcy9oY2IvaDg4LzEyNzgwOTE0NTA3ODA2LmpwZ3xlOGNmOTZiYjIyZGIxOTk4NGFhMDJiNDY1YzM0NzNjZjg2NDZiZTBkZTkwN2ZiOGIxZTBhNDQ0OWI5NzQ2ODMw" ,
+name: "REDEFINE + Lash Boost Special" ,
+priceTag: "$343.00 |  $307.00 with" ,
+priceValue : 343 , 
+caregory : "Regimens"} ,
+
+    ];
+
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+
+  
+  
+  
+ 
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#container").append(box);
+  });
+
+ 
+  function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+  // document.querySelector("#container").innerHTML=""
+</script>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      *{
+        
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+      }
+      .container{
+          display: grid;
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: repeat(5,100px);
+          /* height: auto; */
+          margin-top: 5rem;
+          width: 30%;
+
+      }
+      select{
+        border: none;
+      }
+      
+     
+    
+
+     
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        /* text-align: center; */
+        margin-top: 1rem;
+        font-weight: 100;
+      }
+      .classw {
+        width: 50%;
+        font-size: 19px;
+        margin: auto;
+        margin-top: 18px;
+        text-align: center;
+        line-height: 1.3;
+      }
+      #conta {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px 20px;
+        margin-top: 2rem;
+      
+        /* overflow: ; */
+      }
+
+      img {
+        height: 50%;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 17px;
+        height: 52px;
+      }
+      .boxka {
+        display: flex;
+        justify-content: center;
+        margin-top: 23px;
+      }
+      .boxka > P:nth-child(2) {
+        color: lightseagreen;
+        font-size: 13px;
+        margin: 2px;
+        margin-left: 9px;
+        font-weight: bold;
+      }
+      .buttonwalla {
+        display: block;
+        margin: auto;
+        font-size: 13px;
+        margin-top: 13px;
+        padding: 15px 106px 15px 106px;
+        border-radius: 12px;
+      }
+      #conta > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        /* overflow: scroll; */
+      }
+      #bapp{
+          display: flex;
+         
+           
+      }
+     
+      .container>h1{
+        /* display: flex;
+        justify-content: space-between; */
+        width:99%;
+        height: max-content;
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+        padding-left: 20px;
+       /* margin-left: 1em; */
+       /* text-align: 43px; */
+       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      }
+      select{
+        font-size: 20px;
+      }
+      option{
+        font-size: 14px;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="bapp">
+      
+    <div class="container">
+      <h1>Filter By</h1>
+      <select name="" id="category">
+           <option value="">Category</option>
+           <option value="Regimens">Regimens (15)</option>
+           <option value="Faceserums">Face Serums</option>
+           <option value="">Eyes</option>
+           <option value="Facemask">Face Mask</option>
+           <option value="Hand & Body" >Hand & Body</option>
+           <option value="">Sun Protection</option>
+           <option value="">Pro Skin Tools</option>
+           <option value="Regimens">Accesories</option>
+           <option value="Dermacosmetics">Special Offers</option>
+      </select>
+      <select name="" id="skinconcern">
+        <option value="">Skin Concern</option>
+        <option value="">Lifting and Firming</option>
+        <option value="">Dull & Tired Skin</option>
+        <option value="">Acne & Breakouts</option>
+        <option value="">Uneven Tone & Dark Marks</option>
+        <option value="">Sensitivity & Visible Redness</option>
+        <option value="">Pores & Blackheads</option>
+        <option value="">Dry Skin</option>
+       
+
+
+      </select>
+      <select name="" id="applicationarea">
+        <option value="">application Area</option>
+        <option value="">Face</option>
+        <option value="">Eyes</option>
+        <option value="">EyeLashes</option>
+        <option value="">Body</option>
+        <option value="">application Area</option>
+        <option value="">application Area</option>
+        <option value="">application Area</option>
+        <option value="">application Area</option>
+
+
+      </select>
+      <select name="" id="productline">
+
+
+      </select>
+    
+    </div>
+    <div id="conta"></div>
+</div>
+</body>
+</html>
+<script>
+    var originaldata = [
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"regimens"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"Atta"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"papu"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"Atta"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"Atta"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+      product:"regimens"
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+     
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+    },
+    {
+      imgUrl:
+        "https://www.rodanandfields.com/en-us/medias/AAWA125-AATN125-AATT030-AAPM030-REDEFINE-Regimen-Explainer-570x570.png?context=bWFzdGVyfGltYWdlc3wzMTE2NXxpbWFnZS9wbmd8aW1hZ2VzL2hkNy9oMWMvMTM3NTgzODQwNzg4NzgucG5nfDE5NTM4Yzc1OTA0MWNiY2M5NzYwMDZhMTQ0NGVmZDEzZmRhYzVlZWE4YWRhODk3NWQ0ZGU1NDlhNzVjZTUyOTU",
+      name: "Redefine Regimen",
+      priceTag: "$220.00 |  $197.00 with",
+      priceValue: 220.0,
+      Perkvalue: 197,
+    },
+  ];
+ 
+  var CartData = JSON.parse(localStorage.getItem("Cartvalue"))||[]
+ 
+  window.addEventListener("load", function () {
+    displayData(originaldata);
+    
+    
+   
+    
+  });
+  
+  function handlesort(filter){
+   var sel=document.querySelector("#cateogry").value 
+   
+
+   
+  
+    filter=originaldata.filter(function(el,i,arr){
+       
+      
+       return el.caregory==sel
+       
+        
+    
+   })
+   displayData(filter)
+  
+
+  
+
+  }
+ function displayData(originaldata){
+    document.querySelector("#conta").innerHTML = ""
+  originaldata.map(function (el, i, arr) {
+    var box = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.src = el.imgUrl;
+    var nam = document.createElement("h2");
+    nam.innerText = el.name;
+    var box1 = document.createElement("div");
+    box1.setAttribute("class", "boxka");
+    var priceTag = document.createElement("p");
+    // priceTag.setAttribute(".para","p")
+    priceTag.innerText = el.priceTag;
+    var PerPerks = document.createElement("p");
+    PerPerks.innerText = "PC PERKS";
+    box1.append(priceTag, PerPerks);
+    var priceValue=el.priceValue
+    var Perkvalue=el.Perkvalue
+    var btn = document.createElement("button");
+    btn.setAttribute("class", "buttonwalla");
+    btn.innerText = "SHOP NOW";
+    
+    
+    btn.addEventListener("click", function () {
+     
+      displayCart(el);
+    
+     
+      
+    });
+    // console.log(count)
+
+    box.append(image, nam, box1, btn);
+    document.querySelector("#conta").append(box);
+  });
+}
+function displayCart(el) {
+    
+    console.log(el);
+    CartData.push(el);
+    console.log(CartData);
+    localStorage.setItem("Cartvalue", JSON.stringify(CartData));
+    
+  }
+</script>
