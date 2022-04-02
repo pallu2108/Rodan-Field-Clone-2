@@ -28,13 +28,30 @@
             display: flex;
             /* margin-top: 30px; */
             padding-top: 25px;
-            padding-left: 10px;
+            padding-left: 20px;
+            background-color: #f7f7f7;
             
         }
-        #btn{
-            width: 20px;
+        #radiobtn{
+            width: 30px;
             height: 20px;
-            border-radius: 50%;   
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn1{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn2{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        .card{
+            padding-left: 10px;
         }
         #third{
             padding-left: 20px;
@@ -59,13 +76,14 @@
         }
         #save{
             background-color: rgb(224, 218, 218);
-            color: white;
+            color: black;
             text-align: center;
             height: 40px;
             width: 91%;
             margin-left: 30px;
             margin-top: 10px;
-            border: none;
+           
+            font-size: 20px;
             /* margin: auto; */
         }
         #expiration{
@@ -102,47 +120,48 @@
        <hr>
        <div id="maindiv">
        <div id="second">
-           <button id="btn"></button>&ensp; &ensp;
-           <i style="font-size: 20px;" class="fa-solid fa-credit-card"></i> &ensp; &ensp;
+          <input type="radio" name="rediobtn1" value="credit card" id="radiobtn" checked>
+          <br>
+           <i style="font-size: 20px;" class="fa-solid fa-credit-card card"></i> &ensp; &ensp;
            <p style="margin-top: -3px; font-size: 22px;">Credit Card</p>
        </div>
        <div id="third">
         <p>Name on credit card</p>
-        <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="text" id="name">
+        <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="text" id="name" placeholder="Enter the Name of card holder">
         <p>credit card number</p>
-        <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="number" id="number" >
+        <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="number" id="number" placeholder="Enter the Card Number">
         </div>
         <div id="expiration">
             <div><p style="font-size:15px;">Expiration</p></div>
             <div><p>cvv</p></div>   
         <div><input style="height: 30px; width: 260px; border: 1px solid grey;text-align: center;border-radius: 3px;" type="text" placeholder="MM/YY" id="expiry"></div>
-        <div><input style="height: 30px; width: 260px; border: 1px solid grey;border-radius: 3px;" type="number" id="cvv"></div> 
+        <div><input style="height: 30px; width: 260px; border: 1px solid grey;border-radius: 3px;" type="number" id="cvv" placeholder="CVV"></div> 
         </div>
     </br>
         <div id="bfourth">
             <h4 style="padding-left: 25px;">Billing Address</h4>
            <div id="main">
             <div id="fourth">
-                <button id="btn"></button>&ensp; &ensp;
+                <input type="radio" name="rediobtn" value="Same as Shipping Address" id="radiobtn" checked >
                 <p style="margin-top: -3px; font-size: 18px;">Same as Shipping Address</p>
             </div>
             <hr>
             <div id="fifth">
-                <button id="btn"></button>&ensp; &ensp;
-                <p style="margin-top: -3px; font-size: 18px;color:grey;">Use a different billing address</p>
+                <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn" >
+                <p style="margin-top: -3px; font-size: 18px;">Use a different billing address</p>
             </div>
             
         </div>
-        <button id="save">SAVE & CONTINUE</button>
+        <button id="save" >SAVE & CONTINUE</button>
         </div>
         <hr>
         <div id="last">
-            <button id="btn"></button>&ensp; &ensp;
+            <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
             <img style="height:25px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/paypal.svg" alt="">
         </div>
         <hr>
         <div id="last1">
-            <button id="btn"></button>&ensp; &ensp;
+            <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
             <img style="height:20px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/klarna.svg" alt="">
         </div>
     </div> 

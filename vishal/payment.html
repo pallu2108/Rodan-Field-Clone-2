@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script 
+src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
+</script>
 <style>
     #main{
         display: flex;
@@ -68,13 +71,22 @@
 #container >div>img{
     width: 30%;
  }
- #rbox>p{
+ #edit>p{
      font-size: 20px;
+    
+ }
+ #edit{
+     display: flex;
      background-color: #f7f7f7;
-     padding-top: 20px;
-     padding-bottom: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
      margin-top: -0px;
      padding-left: 10px;
+     padding-right: 10px;
+     justify-content: space-between;
+ }
+ #edit>h3{
+     color: blue;
  }
  #rbox{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -107,6 +119,116 @@
      margin-top: -10px;
 
  }
+
+
+ #header{
+           
+            width: 600px;
+            /* border: 1px solid black; */
+            margin-left: 0px;
+        }
+        #maindiv{
+            height: 90%;
+            width: 100%;
+            border: 1px solid rgb(198, 194, 194);
+            border-radius: 5px;
+        }
+        #second{
+            height: 5%;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 20px;
+            background-color: #f7f7f7;
+            
+        }
+        #radiobtn{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn1{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn2{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        .card{
+            padding-left: 10px;
+        }
+        #third{
+            padding-left: 20px;
+            margin-top: 20px;
+            color:gray;
+        }
+      
+        #fourth{
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #vishal {
+            
+            width: 90%;
+            border: 1px solid grey;
+           margin: auto;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+        #fifth{
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #save{
+            background-color: rgb(224, 218, 218);
+            color: black;
+            text-align: center;
+            height: 40px;
+            width: 91%;
+            margin-left: 30px;
+            margin-top: 10px;
+           
+            font-size: 20px;
+            /* margin: auto; */
+        }
+        #expiration{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            padding-left: 20px;
+        }
+        #last{
+            height:auto;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 10px;
+        }
+        #last1{
+            height:auto;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 10px;
+            padding-top: -5px;
+        }
+        #credit{
+            margin-top: -5px;
+        }
 </style>
 <body>
     <div id="main">
@@ -121,13 +243,69 @@
                 <hr>
                 <h2>Payment</h2>
                  <hr>
-               
+                 <div id="header">
+                  
+                    
+                    <div id="maindiv">
+                    <div id="second">
+                       <input type="radio" name="rediobtn1" value="credit card" id="radiobtn" checked>
+                       <br>
+                        <i style="font-size: 20px;" class="fa-solid fa-credit-card card"></i> &ensp; &ensp;
+                        <h2 id="credit">Credit Card</h2>
+                    </div>
+                    <div id="third">
+                     <h4>Name on credit card</p>
+                     <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px; margin-top: 10px;" type="text" id="name" placeholder="Enter the Name of card holder">
+                     <p>credit card number</p>
+                     <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="number" id="number" placeholder="Enter the Card Number">
+                     </div>
+                     <div id="expiration">
+                         <div><p style="font-size:15px;">Expiration</p></div>
+                         <div><p>cvv</p></div>   
+                     <div><input style="height: 30px; width: 260px; border: 1px solid grey;text-align: center;border-radius: 3px;" type="text" placeholder="MM/YY" id="expiry"></div>
+                     <div><input style="height: 30px; width: 260px; border: 1px solid grey;border-radius: 3px;" type="number" id="cvv" placeholder="CVV"></div> 
+                     </div>
+                 </br>
+                     <div id="bfourth">
+                         <h4 style="padding-left: 25px;">Billing Address</h4>
+                        <div id="vishal">
+                         <div id="fourth">
+                             <input type="radio" name="rediobtn" value="Same as Shipping Address" id="radiobtn" checked >
+                             <p style="margin-top: -3px; font-size: 18px;">Same as Shipping Address</p>
+                         </div>
+                         <hr>
+                         <div id="fifth">
+                             <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn" >
+                             <p style="margin-top: -3px; font-size: 18px;">Use a different billing address</p>
+                         </div>
+                         
+                     </div>
+                     <button id="save" >SAVE & CONTINUE</button>
+                     </div>
+                     <hr>
+                     <div id="last">
+                         <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
+                         <img style="height:25px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/paypal.svg" alt="">
+                     </div>
+                     <hr>
+                     <div id="last1">
+                         <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
+                         <img style="height:20px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/klarna.svg" alt="">
+                     </div>
+                 </div> 
+                 
+                 
+             </div>
 
             </div>
   
         <div id="rbox">
-            <p>Order Summary</p>
-            <p>Order Summary</p>
+            <div id="edit">
+                <p>Order Summary</p>
+                <h3>Edit</h3>
+            </div>
+           
+           
  <div id="inner">
  <div id="container">
 
@@ -201,7 +379,7 @@ var estimate=localStorage.getItem("total")
         box2.setAttribute("class","innerbox")
         
         var box3=document.createElement("div")
-         var name=document.createElement("h3")
+         var name=document.createElement("p")
        name.innerText=el.name
        var para=document.createElement("p")
        para.innerText="Qty: 1"

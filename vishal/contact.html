@@ -69,13 +69,22 @@
 #container >div>img{
     width: 30%;
  }
- #rbox>p{
+ #edit>p{
      font-size: 20px;
+    
+ }
+ #edit{
+     display: flex;
      background-color: #f7f7f7;
-     padding-top: 20px;
-     padding-bottom: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
      margin-top: -0px;
      padding-left: 10px;
+     padding-right: 10px;
+     justify-content: space-between;
+ }
+ #edit>h3{
+     color: blue;
  }
  #rbox{
    width: 570px;
@@ -104,7 +113,10 @@
 
         </div>
         <div id="rbox">
- <p>Order Summary</p>
+            <div id="edit">
+                <p>Order Summary</p>
+                <h3>Edit</h3>
+            </div>
  <div id="inner">
  <div id="container">
 
