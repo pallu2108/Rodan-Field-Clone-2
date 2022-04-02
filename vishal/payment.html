@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script 
+src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous">
+</script>
+<style>
+    #main{
+        display: flex;
+       width: 80%;
+       margin: auto;
+     margin-top: -30px;
+    }
+    #main> div{
+        
+
+ width: 571px;
+ margin-left: 60px;
+ margin-top: 90px;
+}
+    h2{
+        font-weight: lighter;
+       
+    }
+ button{
+     width: 100%;
+     height: 46px;
+     font-size: 20px;
+     color: white;
+     background-color: black;
+ }
+ input{
+     width: 99%;
+     height: 40px;
+     margin-top: -40px;
+     margin-bottom: 30px
+ }
+ hr{
+     color: blue;
+ }
+ #lbox>p{
+     font-size: 20px;
+ }
+ #total>div{
+     display: flex;
+     justify-content: space-between;
+     margin-top: -15px;
+     
+ }
+ #inner{
+    padding-left: 15px;
+     padding-right: 15px;
+   
+ }
+ #container{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    margin-bottom: 10px;
+
+    margin-top: 20px;
+}
+#container >div{
+  display: flex;
+  border-bottom: 1px solid;
+  
+}
+#container >div>img{
+    width: 30%;
+ }
+ #edit>p{
+     font-size: 20px;
+    
+ }
+ #edit{
+     display: flex;
+     background-color: #f7f7f7;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-top: -0px;
+     padding-left: 10px;
+     padding-right: 10px;
+     justify-content: space-between;
+ }
+ #edit>h3{
+     color: blue;
+ }
+ #rbox{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+ }
+ #bottom{
+     text-align: center;
+     margin-top: 30px;
+ }
+ 
+ #upbox{
+    display: flex;
+    justify-content: space-between;
+ }
+ #upbox >div{
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ #upbox>div>input{
+  margin-top: px;
+ }
+ #city {
+     display: flex;
+     justify-content: space-between;
+     margin-top: -50px;
+ }
+ .ad{
+     margin-top: -50px;
+ }
+ #sbox>p{
+     margin-top: -10px;
+
+ }
+
+
+ #header{
+           
+            width: 600px;
+            /* border: 1px solid black; */
+            margin-left: 0px;
+        }
+        #maindiv{
+            height: 90%;
+            width: 100%;
+            border: 1px solid rgb(198, 194, 194);
+            border-radius: 5px;
+        }
+        #second{
+            height: 5%;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 20px;
+            background-color: #f7f7f7;
+            
+        }
+        #radiobtn{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn1{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        #radiobtn2{
+            width: 30px;
+            height: 20px;
+            accent-color: black;
+          margin-top: -0px;
+        }
+        .card{
+            padding-left: 10px;
+        }
+        #third{
+            padding-left: 20px;
+            margin-top: 20px;
+            color:gray;
+        }
+      
+        #fourth{
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #vishal {
+            
+            width: 90%;
+            border: 1px solid grey;
+           margin: auto;
+            padding-left: 20px;
+            border-radius: 5px;
+        }
+        #fifth{
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #save{
+            background-color: rgb(224, 218, 218);
+            color: black;
+            text-align: center;
+            height: 40px;
+            width: 91%;
+            margin-left: 30px;
+            margin-top: 10px;
+           
+            font-size: 20px;
+            /* margin: auto; */
+        }
+        #expiration{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            padding-left: 20px;
+        }
+        #last{
+            height:auto;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 10px;
+        }
+        #last1{
+            height:auto;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            /* margin-top: 30px; */
+            padding-top: 25px;
+            padding-left: 10px;
+            padding-top: -5px;
+        }
+        #credit{
+            margin-top: -5px;
+        }
+        .navbar {
+  width: 100%;
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  margin-left: 0px;
+  border-bottom: 1px solid #111;
+}
+
+h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 25px;
+  font-weight: lighter;
+}
+.navbar {
+  width: 100%;
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  margin-left: 0px;
+  border-bottom: 1px solid #111;
+}
+
+h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 25px;
+  font-weight: lighter;
+}
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+          <a href="./index.html"
+            ><img
+              src="https://www.rodanandfields.com/en-us/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA"
+              alt="Rodan + Fields"
+          /></a>
+        </div>
+      </nav>
+    <div id="main">
+        <div id="lbox">
+            <h2>Contact</h3>
+                <div id="cont"> 
+                    
+                </div>
+                <hr>
+                <h2>Shipping</h2>
+                <div id="Shipping"></div>
+                <hr>
+                <h2>Payment</h2>
+                 <hr>
+                 <div id="header">
+                  
+                    
+                    <div id="maindiv">
+                    <div id="second">
+                       <input type="radio" name="rediobtn1" value="credit card" id="radiobtn" checked>
+                       <br>
+                        <i style="font-size: 20px;" class="fa-solid fa-credit-card card"></i> &ensp; &ensp;
+                        <h2 id="credit">Credit Card</h2>
+                    </div>
+                    <div id="third">
+                     <h4>Name on credit card</p>
+                     <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px; margin-top: 10px;" type="text" id="name" placeholder="Enter the Name of card holder">
+                     <p>credit card number</p>
+                     <input style="height: 30px;width: 95%;border: 1px solid grey;border-radius: 5px;" type="number" id="number" placeholder="Enter the Card Number">
+                     </div>
+                     <div id="expiration">
+                         <div><p style="font-size:15px;">Expiration</p></div>
+                         <div><p>cvv</p></div>   
+                     <div><input style="height: 30px; width: 260px; border: 1px solid grey;text-align: center;border-radius: 3px;" type="text" placeholder="MM/YY" id="expiry"></div>
+                     <div><input style="height: 30px; width: 260px; border: 1px solid grey;border-radius: 3px;" type="number" id="cvv" placeholder="CVV"></div> 
+                     </div>
+                 </br>
+                     <div id="bfourth">
+                         <h4 style="padding-left: 25px;">Billing Address</h4>
+                        <div id="vishal">
+                         <div id="fourth">
+                             <input type="radio" name="rediobtn" value="Same as Shipping Address" id="radiobtn" checked >
+                             <p style="margin-top: -3px; font-size: 18px;">Same as Shipping Address</p>
+                         </div>
+                         <hr>
+                         <div id="fifth">
+                             <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn" >
+                             <p style="margin-top: -3px; font-size: 18px;">Use a different billing address</p>
+                         </div>
+                         
+                     </div>
+                     <button id="save" >SAVE & CONTINUE</button>
+                     </div>
+                     <hr>
+                     <div id="last">
+                         <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
+                         <img style="height:25px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/paypal.svg" alt="">
+                     </div>
+                     <hr>
+                     <div id="last1">
+                         <input type="radio" name="rediobtn" value="Use a different billing address" id="radiobtn2" >
+                         <img style="height:20px;width:90px" src="https://www.rodanandfields.com/en-us/_ui/images/card-icons/klarna.svg" alt="">
+                     </div>
+                 </div> 
+                 
+                 
+             </div>
+
+            </div>
+  
+        <div id="rbox">
+            <div id="edit">
+                <p>Order Summary</p>
+                <h3>Edit</h3>
+            </div>
+           
+           
+ <div id="inner">
+ <div id="container">
+
+ </div>
+ <div id="total">
+    <div>
+        <p>Subtotal</p>
+        <p id="subtotal"></p>
+    </div>
+    <div>
+        <p>Estimated Tax</p>
+        <p>--</p>
+    </div>
+    <div>
+        <p>Shipping</p>
+        <p>Free</p>
+    </div>
+    <hr>
+    <div>
+    <h3>TOTAL <span>(2 Items)</span></h3>
+    <p id="estimate"></p>
+   </div>
+</div>
+        </div>
+    </div>
+    </div>
+    <div id="bottom">
+        <hr>
+        <p>Privacy Policy | Product + Help Center  | Shipping</p> 
+    </div>
+</body>
+<script>
+var contact= localStorage.getItem("Email")
+ console.log(contact)
+  var mailid=document.querySelector("#cont")
+  mailid.innerText=contact
+
+var shippinglist=JSON.parse(localStorage.getItem("contactdetail"))
+
+shippinglist.map(function(el,i){
+    var box=document.createElement("div")
+    box.setAttribute("id","sbox")
+    var Name=document.createElement("p")
+    Name.innerText=el.name
+    var Address=document.createElement("p")
+    Address.innerText=el.address
+    var City=document.querySelector("p")
+    City.innerText=el.city
+    var Phone=document.createElement("p")
+    Phone.innerText=el.phone
+    box.append(Name,Address,City,Phone)
+
+    document.querySelector("#Shipping").append(box)
+
+})
+
+
+var estimate=localStorage.getItem("total")
+      var subtotal=document.querySelector("#subtotal")
+          subtotal.innerText= "$"+estimate+".00"
+      var Total=document.querySelector("#estimate")
+          Total.innerText= "$"+estimate+".00"
+
+
+     var productbag=JSON.parse(localStorage.getItem("productbag"))
+    productbag.map(function(el,i){
+        var box=document.createElement("div")
+        var img=document.createElement("img")
+        img.src=el.image_url
+        var box2=document.createElement("div")
+        box2.setAttribute("class","innerbox")
+        
+        var box3=document.createElement("div")
+         var name=document.createElement("p")
+       name.innerText=el.name
+       var para=document.createElement("p")
+       para.innerText="Qty: 1"
+       box3.append(name,para)
+        var box4=document.createElement("div")
+       var price=document.createElement("p")
+         price.innerText="$"+el.price +".00"
+         box4.append(price)
+       box2.append(box3,box4)
+      box.append(img,box2)
+
+    
+      
+      document.querySelector("#container").append(box)
+
+    })
+</script>
+</html>

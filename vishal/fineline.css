@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    }
+    #container > div{
+  
+    text-align: center;
+    margin: auto;
+
+       }
+    
+       #container > div>img{
+         width: 330px;
+         height: 330px;
+       }
+      
+       button{
+         width: 100%;
+         padding: 10px 0px 10px 0px;
+         font-size: 15px;
+         margin-top: 10px;
+         background-color: white;
+         border: 1px solid gray;
+       }
+       button:hover{
+border-color: aqua;
+color: red;
+       }
+      .innerbox{
+        display: flex;
+       padding-left: 20px;
+       margin-top: 20px;
+      }
+      .innerbox >p{
+        text-align: center;
+        margin-left: 10px;
+      }
+      
