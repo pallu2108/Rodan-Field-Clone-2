@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/24c494a6b6.js"
       crossorigin="anonymous"
     ></script>
+  
     <style>
       * {
         margin: 0;
@@ -21,6 +22,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, auto);
         grid-gap: 10px 30px;
+        margin-top: 5rem;
         /* overflow: ; */
       }
 
@@ -78,6 +80,25 @@
         text-align: center;
         font-size: 20px;
       }
+      #thanos{
+        margin-top: -3rem;
+        margin-left: 50rem;
+      
+      }
+      #thanos button{
+        font-size: 23px;
+        padding: 17px 19px 18px 27px;
+        border-radius: 12px;
+        font-family: poppins;
+        background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+
+}
+
+
+      
     </style>
   </head>
   <body>
@@ -86,6 +107,10 @@
 
       <div class="counter"></div>
     </div>
+    <div id="thanos">
+      <button id="than">GO To CHECKOUT</button>
+    </div>
+     
     <div id="container"></div>
   </body>
 </html>
@@ -152,4 +177,26 @@
     
    
   }
+  
+  var i=0
+  function cha(){
+    var btn=document.querySelector("#than")
+    txcolor=["#EEEDDE","wheat","#F68989"]
+    btn.style.color=txcolor[i]
+    i=(i+1)%txcolor.length
+  }
+  
+      
+     setInterval(cha,1000)
+  document.querySelector("#than").addEventListener("click",chek)
+  function chek(){
+    if(Data.length==0){
+      window.location.href=""
+    }
+    else{
+     
+     window.location.href="../vishal/Checkoutpage.html"
+    }
+  }
+  
 </script>
