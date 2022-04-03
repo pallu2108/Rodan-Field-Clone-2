@@ -82,17 +82,19 @@
       }
       #thanos{
         margin-top: -3rem;
-        margin-left: 50rem;
+        margin-left: 70rem;
       
       }
       #thanos button{
-        font-size: 23px;
-        padding: 17px 19px 18px 27px;
+       height: 45px;
+       width: 180px;
+        font-size: 18px;
+        border: none;
+        /* padding: 17px 19px 18px 27px; */
         border-radius: 12px;
         font-family: poppins;
-        background: #ad5389;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: #f1dfd1;
+background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
  
 
 }
@@ -108,7 +110,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
       <div class="counter"></div>
     </div>
     <div id="thanos">
-      <button id="than">GO To CHECKOUT</button>
+      <button id="than">GO TO CHECKOUT</button>
     </div>
      
     <div id="container"></div>
@@ -181,7 +183,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
   var i=0
   function cha(){
     var btn=document.querySelector("#than")
-    txcolor=["#EEEDDE","wheat","#F68989"]
+    txcolor=["#000133","#F68989"]
     btn.style.color=txcolor[i]
     i=(i+1)%txcolor.length
   }
