@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Thanks for visiting | Rodan + Fields®</title>
     <script
       src="https://kit.fontawesome.com/24c494a6b6.js"
       crossorigin="anonymous"
@@ -73,6 +73,14 @@
           animation: appear 20s;
          
       }
+      #order{
+        margin-top: 5rem;
+          position: static;
+          text-align: center;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          animation: appear 10s;
+          margin-top: -20px;
+      }
       @keyframes appear {
 
         0%{
@@ -107,8 +115,34 @@
 
           
       }
-      
+     
+    #order>p{
+      font-weight: lighter;
+    }
+   
+    #btn
+           {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 55px;
+    background-color: #222;
+    border-radius: 5px;
 
+
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    border: transparent;
+    font-family: "Montserrat", sans-serif;
+}
+
+#btn:hover
+{
+    background-color: rgb(73, 73, 73);
+}
     </style>
   </head>
   <body>
@@ -119,7 +153,21 @@
       alt=""
     />
     <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=360/uploads/users/523/posts/32694/final_image/tutorial-preview-large.png" alt="" class="symbol">
+    <div id="order">
+    <h2>Thankyou for your purchase !</h2>
+      <p>Your order ID is : 1215097800</p>
+      <p>
+        You will receive an order confirmation email with details of your order.
+      </p>
+      <button id="btn">CONTINUE SHOPPING</button>
+    </div>
   </body>
+  <script>
+    document.querySelector("#btn").addEventListener("click",myfun)
+    function myfun(){
+      window.location.href="../index.html"
+    }
+  </script>
 </html>
 <script>
   let audio=new Audio()
